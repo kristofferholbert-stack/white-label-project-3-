@@ -72,6 +72,7 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     const [selectedStack, setSelectedStack] = useState<SolutionStack | null>(null);
     const [saving, setSaving] = useState(false);
     const [isSubscribed, setIsSubscribed] = useState(false);
+    const [loadError, setLoadError] = useState<string | null>(null);
 
     useEffect(() => {
         const checkSubscription = async () => {
@@ -86,7 +87,6 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     // Check if we should show results after signup
     useEffect(() => {
         const checkForResults = async () => {
-            // Check both URL param AND sessionStorage for reliability
             const hash = window.location.hash;
             const params = new URLSearchParams(hash.split('?')[1]);
             const hasUrlFlag = params.get('showResults') === 'true';
@@ -96,62 +96,76 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                 hasUrlFlag,
                 hasStorageFlag,
                 hasUser: !!user,
-                hash: window.location.hash
+                hash: window.location.hash,
+                timestamp: new Date().toISOString()
             });
 
-            if ((hasUrlFlag || hasStorageFlag) && user) {
-                // Clear the session flag so we don't show again
-                sessionStorage.removeItem('show_intake_results');
+            if ((hasUrlFlag || hasStorageFlag)) {
+                if (!user) {
+                    console.log('IntakePage: Waiting for authentication...');
+                    setIsAnalyzing(true);
+                    return;
+                }
 
+                sessionStorage.removeItem('show_intake_results');
                 console.log('IntakePage: User authenticated, loading results data');
 
-                // User just signed up and completed intake - load their data
                 setIsAnalyzing(true);
+                setLoadError(null);
 
                 try {
-                    // First try to load from localStorage (just saved)
                     const pendingDataStr = localStorage.getItem('pending_intake_data');
 
                     if (pendingDataStr) {
                         const savedData = JSON.parse(pendingDataStr);
 
-                        // Check if data has expired (30 minutes)
                         if (savedData.expiresAt && Date.now() > savedData.expiresAt) {
                             console.log('IntakePage: Data expired, loading from database');
                             localStorage.removeItem('pending_intake_data');
-                            // Fall through to database load
                         } else {
                             console.log('IntakePage: Loading from localStorage', {
                                 currentMRR: savedData.currentMRR,
-                                targetMRR: savedData.targetMRR
+                                targetMRR: savedData.targetMRR,
+                                savedAt: new Date(savedData.savedAt || 0).toISOString()
                             });
 
-                            // Populate state with saved data
+                            if (!savedData.currentMRR || !savedData.answers) {
+                                console.error('IntakePage: Invalid data in localStorage');
+                                setLoadError('Invalid assessment data. Please try again.');
+                                localStorage.removeItem('pending_intake_data');
+                                setTimeout(() => onNavigate('intake'), 3000);
+                                return;
+                            }
+
                             setCurrentMRR(savedData.currentMRR);
                             setTargetMRR(savedData.targetMRR);
                             setAnswers(savedData.answers);
 
-                            // Clear the localStorage now that we've loaded it
                             localStorage.removeItem('pending_intake_data');
 
-                            // Show results after brief delay
                             setTimeout(() => {
                                 setIsAnalyzing(false);
                                 setShowResults(true);
-                                console.log('IntakePage: Results displayed');
+                                console.log('IntakePage: Results displayed successfully');
                             }, 1500);
 
-                            return; // Early return - don't try database
+                            return;
                         }
                     }
 
-                    // If we get here, localStorage was empty or expired - try database
-                    console.log('IntakePage: Loading from database');
-                    const { data: progressionData } = await supabase
+                    console.log('IntakePage: Loading from database for user:', user.id);
+                    const { data: progressionData, error: dbError } = await supabase
                         .from('user_progression')
                         .select('*')
                         .eq('user_id', user.id)
                         .maybeSingle();
+
+                    if (dbError) {
+                        console.error('IntakePage: Database error', dbError);
+                        setLoadError('Failed to load your assessment. Please contact support.');
+                        setIsAnalyzing(false);
+                        return;
+                    }
 
                     if (progressionData) {
                         console.log('IntakePage: Loaded from database', {
@@ -161,7 +175,7 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
 
                         setCurrentMRR(progressionData.current_mrr);
                         setTargetMRR(progressionData.target_mrr - progressionData.current_mrr);
-                        setAnswers(progressionData.intake_responses);
+                        setAnswers(progressionData.intake_responses || {});
 
                         setTimeout(() => {
                             setIsAnalyzing(false);
@@ -169,14 +183,20 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                             console.log('IntakePage: Results displayed from DB');
                         }, 1500);
                     } else {
-                        // No data found, redirect to dashboard
-                        console.log('IntakePage: No data found, redirecting to dashboard');
-                        onNavigate('dashboard');
+                        console.warn('IntakePage: No progression data found');
+                        setLoadError('No assessment data found. Redirecting to dashboard...');
+                        setTimeout(() => {
+                            setIsAnalyzing(false);
+                            onNavigate('dashboard');
+                        }, 2000);
                     }
                 } catch (error) {
-                    console.error('Failed to load intake results:', error);
-                    // Fallback to dashboard on error
-                    onNavigate('dashboard');
+                    console.error('IntakePage: Failed to load intake results:', error);
+                    setLoadError('Something went wrong loading your results. Redirecting...');
+                    setTimeout(() => {
+                        setIsAnalyzing(false);
+                        onNavigate('dashboard');
+                    }, 3000);
                 }
             }
         };
@@ -449,17 +469,45 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     if (isAnalyzing) {
         return (
             <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center p-4">
-                <div className="relative flex items-center justify-center mb-8">
-                    <div className="absolute w-32 h-32 bg-primary-500/20 rounded-full animate-ping"></div>
-                    <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center shadow-lg shadow-primary-500/50 animate-pulse">
-                        <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
+                {loadError ? (
+                    <div className="max-w-md w-full">
+                        <div className="bg-red-500/10 border-2 border-red-500/50 rounded-2xl p-8 text-center">
+                            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-400">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                            </div>
+                            <h2 className="text-xl font-bold text-white mb-2">Oops! Something went wrong</h2>
+                            <p className="text-red-300 mb-4">{loadError}</p>
+                            <button
+                                onClick={() => onNavigate('intake')}
+                                className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors"
+                            >
+                                Try Again
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <h2 className="text-2xl font-bold text-white mb-2">Analyzing your responses...</h2>
-                <p className="text-slate-400">Preparing your personalized roadmap and recommendations.</p>
+                ) : (
+                    <>
+                        <div className="relative flex items-center justify-center mb-8">
+                            <div className="absolute w-32 h-32 bg-primary-500/20 rounded-full animate-ping"></div>
+                            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center shadow-lg shadow-primary-500/50 animate-pulse">
+                                <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h2 className="text-2xl font-bold text-white mb-2">
+                            {user ? 'Loading your personalized roadmap...' : 'Analyzing your responses...'}
+                        </h2>
+                        <p className="text-slate-400">
+                            {user ? 'Just a moment while we prepare your results.' : 'Preparing your personalized roadmap and recommendations.'}
+                        </p>
+                    </>
+                )}
             </div>
         );
     }

@@ -53,6 +53,8 @@ export const SignUpPage: React.FC<SignUpPageProps> = ({ onNavigate }) => {
         }
 
         setLoading(true);
+        console.log('SignUp: Starting signup process', { flow, hasIntakeData: !!localStorage.getItem('pending_intake_data') });
+
         try {
             const { data, error: authError } = await supabase.auth.signUp({
                 email: formData.email,
@@ -68,73 +70,76 @@ export const SignUpPage: React.FC<SignUpPageProps> = ({ onNavigate }) => {
             if (authError) throw authError;
 
             if (data.user) {
-                // Check for pending intake data
+                console.log('SignUp: User created successfully', { userId: data.user.id });
+
                 const pendingDataStr = localStorage.getItem('pending_intake_data');
                 if (pendingDataStr) {
-                    const pendingData = JSON.parse(pendingDataStr);
+                    console.log('SignUp: Found pending intake data, saving to database');
 
-                    // Insert into user_progression
-                    // We need the level ID, so we might need to fetch it or use the slug if the logic allows
-                    // But IntakePage used slug to find ID.
-                    // Let's repeat the logic roughly or just assume we can insert what we have
-                    // The IntakePage logic was:
-                    /*
-                    const { data: levelData } = await supabase
-                        .from('agency_identity_levels')
-                        .select('id')
-                        .eq('slug', currentLevel.slug)
-                        .maybeSingle();
-                    */
+                    try {
+                        const pendingData = JSON.parse(pendingDataStr);
 
-                   if (pendingData.currentLevelSlug) {
-                        const { data: levelData } = await supabase
-                        .from('agency_identity_levels')
-                        .select('id')
-                        .eq('slug', pendingData.currentLevelSlug)
-                        .maybeSingle();
+                        if (pendingData.currentLevelSlug) {
+                            const { data: levelData, error: levelError } = await supabase
+                                .from('agency_identity_levels')
+                                .select('id')
+                                .eq('slug', pendingData.currentLevelSlug)
+                                .maybeSingle();
 
-                        if (levelData) {
-                             await supabase
-                            .from('user_progression')
-                            .upsert({
-                                user_id: data.user.id,
-                                current_level_id: levelData.id,
-                                current_mrr: pendingData.currentMRR,
-                                target_mrr: pendingData.currentMRR + pendingData.targetMRR,
-                                intake_responses: pendingData.answers,
-                                updated_at: new Date().toISOString()
-                            }, {
-                                onConflict: 'user_id'
-                            });
+                            console.log('SignUp: Level lookup result', { levelData, levelError });
+
+                            if (levelData) {
+                                const { error: upsertError } = await supabase
+                                    .from('user_progression')
+                                    .upsert({
+                                        user_id: data.user.id,
+                                        current_level_id: levelData.id,
+                                        current_mrr: pendingData.currentMRR,
+                                        target_mrr: pendingData.currentMRR + pendingData.targetMRR,
+                                        intake_responses: pendingData.answers,
+                                        updated_at: new Date().toISOString()
+                                    }, {
+                                        onConflict: 'user_id'
+                                    });
+
+                                if (upsertError) {
+                                    console.error('SignUp: Failed to save progression', upsertError);
+                                } else {
+                                    console.log('SignUp: Successfully saved progression to database');
+                                }
+                            } else {
+                                console.warn('SignUp: No level data found for slug:', pendingData.currentLevelSlug);
+                            }
                         }
-                   }
 
-                   // Don't clear storage yet - IntakePage will need it
-                   // localStorage.removeItem('pending_intake_data');
+                        sessionStorage.setItem('show_intake_results', 'true');
 
-                   // Set session flag to show results (helps with timing/race conditions)
-                   sessionStorage.setItem('show_intake_results', 'true');
+                        const dataWithExpiry = {
+                            ...pendingData,
+                            expiresAt: Date.now() + (30 * 60 * 1000),
+                            savedAt: Date.now()
+                        };
+                        localStorage.setItem('pending_intake_data', JSON.stringify(dataWithExpiry));
 
-                   // Add expiry to localStorage data (30 minutes)
-                   const dataWithExpiry = {
-                       ...pendingData,
-                       expiresAt: Date.now() + (30 * 60 * 1000)
-                   };
-                   localStorage.setItem('pending_intake_data', JSON.stringify(dataWithExpiry));
+                        console.log('SignUp: Data prepared, waiting for auth state to settle...');
 
-                   console.log('SignUp: Redirecting to results with data:', !!pendingDataStr);
+                        setTimeout(() => {
+                            console.log('SignUp: Redirecting to intake results page');
+                            window.location.hash = '#intake?showResults=true';
+                        }, 500);
 
-                   // Redirect to intake results page instead of dashboard
-                   window.location.hash = '#intake?showResults=true';
-                   return;
+                        return;
+                    } catch (parseError) {
+                        console.error('SignUp: Failed to parse or save intake data', parseError);
+                    }
                 }
 
-                // Normal signup without intake - go to dashboard
+                console.log('SignUp: No intake data, redirecting to dashboard');
                 onNavigate('dashboard');
             }
         } catch (err: any) {
+            console.error('SignUp: Signup failed', err);
             setError(err.message || 'Failed to create account.');
-        } finally {
             setLoading(false);
         }
     };
