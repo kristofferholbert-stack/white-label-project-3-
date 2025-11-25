@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
-import type { JourneyData, Filters, Solution, LaunchPlaybook, Client, ManagedVendor, ChatMessage, MarketingCopy, PricingTier, ProfitabilityEstimates, SearchResult, SolutionStack, WebsiteTemplateContent, OnboardingCourseOutline, KnowledgeBaseArticle, IrresistibleOffer, IntegrationGuide, SystemAssetsPreview } from '../types';
-import { filterOptionsData, categoryStructure, ALL_SOLUTIONS, CURATED_STACKS } from '../constants';
-import { supabase } from '../lib/supabase';
+import type { JourneyData, Filters, Solution, LaunchPlaybook, Client, ManagedVendor, ChatMessage, MarketingCopy, PricingTier, ProfitabilityEstimates, SearchResult, SolutionStack, WebsiteTemplateContent, OnboardingCourseOutline, KnowledgeBaseArticle, IrresistibleOffer, IntegrationGuide, SystemAssetsPreview } from './types';
+import { filterOptionsData, categoryStructure, ALL_SOLUTIONS, CURATED_STACKS } from './constants';
+import { supabase } from './supabase';
 
 const API_KEY = process.env.API_KEY;
 if (!API_KEY) {

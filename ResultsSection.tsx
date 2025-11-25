@@ -1,7 +1,7 @@
 import React from 'react';
 import { SolutionCard, SolutionCardSkeleton } from './SearchSolutionCard';
 import { StackCard } from './StackCard';
-import type { Solution, SearchResult, SolutionStack, Page } from '../types';
+import type { Solution, SearchResult, SolutionStack, Page } from './types';
 import { Feedback } from './Feedback';
 
 type SortByType = 'matchScore' | 'rating' | 'agencyMargin';

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import type { Page } from '../types';
-import { ENHANCED_INSPIRATIONS } from '../constants';
+import type { Page } from './types';
+import { ENHANCED_INSPIRATIONS } from './constants';
 
 interface InspirationsPageProps {
     onSelectInspiration: (goal: string) => void;

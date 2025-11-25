@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Client, Page } from '../types';
+import type { Client, Page } from './types';
 
 interface PlaybooksPageProps {
     clients: Client[];

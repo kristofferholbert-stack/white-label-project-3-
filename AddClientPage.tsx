@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import type { Client, LaunchPlaybook, ManagedVendor, SolutionStack, Page } from '../types';
-import { generateAndSavePlaybook } from '../services/geminiService';
-import { ALL_SOLUTIONS } from '../constants';
-import { supabase } from '../lib/supabase';
-import { useAuth } from '../contexts/AuthProvider';
+import type { Client, LaunchPlaybook, ManagedVendor, SolutionStack, Page } from './types';
+import { generateAndSavePlaybook } from './geminiService';
+import { ALL_SOLUTIONS } from './constants';
+import { supabase } from './supabase';
+import { useAuth } from './AuthProvider';
 
 interface AddClientPageProps {
     managedVendors: ManagedVendor[];

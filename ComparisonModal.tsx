@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Solution } from '../types';
+import type { Solution } from './types';
 
 interface ComparisonModalProps {
   isOpen: boolean;

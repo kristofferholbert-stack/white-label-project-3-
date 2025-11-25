@@ -1,6 +1,6 @@
 
 import { loadStripe } from '@stripe/stripe-js';
-import { supabase } from '../lib/supabase';
+import { supabase } from './supabase';
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
 

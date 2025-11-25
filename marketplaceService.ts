@@ -1,5 +1,5 @@
-import { supabase } from '../lib/supabase';
-import type { Solution, SolutionStack } from '../types';
+import { supabase } from './supabase';
+import type { Solution, SolutionStack } from './types';
 
 export interface ResellKit {
   id: string;

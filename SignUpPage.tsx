@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import type { Page } from '../types';
-import { supabase } from '../lib/supabase';
+import type { Page } from './types';
+import { supabase } from './supabase';
 
 interface SignUpPageProps {
     onNavigate: (page: Page) => void;

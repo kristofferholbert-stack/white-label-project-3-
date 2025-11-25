@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { getKitCourse, getProgressPercentage, Module, Lesson } from '../content/kitModules';
-import { useAuth } from '../contexts/AuthProvider';
-import { supabase } from '../lib/supabase';
-import { CourseUpsellWidget, CommunityWidget, ProgressMilestoneWidget } from '../components/CourseUpsellWidget';
-import { CompletionCertificate, KeyboardShortcutsModal } from '../components/CompletionCertificate';
+import { getKitCourse, getProgressPercentage, Module, Lesson } from './kitModules';
+import { useAuth } from './AuthProvider';
+import { supabase } from './supabase';
+import { CourseUpsellWidget, CommunityWidget, ProgressMilestoneWidget } from './CourseUpsellWidget';
+import { CompletionCertificate, KeyboardShortcutsModal } from './CompletionCertificate';
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">

@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import type { SolutionStack, Solution, Page, ProfitabilityEstimates, SystemAssetsPreview } from '../types';
-import { ALL_SOLUTIONS, RESELL_KITS } from '../constants';
-import { getNicheProfitabilityEstimates, generateSystemAssetsPreview } from '../services/geminiService';
-import { StackActivationModal } from '../components/StackActivationModal';
-import { TripwireCard } from '../components/TripwireCard';
-import { useAuth } from '../contexts/AuthProvider';
-import { supabase } from '../lib/supabase';
+import type { SolutionStack, Solution, Page, ProfitabilityEstimates, SystemAssetsPreview } from './types';
+import { ALL_SOLUTIONS, RESELL_KITS } from './constants';
+import { getNicheProfitabilityEstimates, generateSystemAssetsPreview } from './geminiService';
+import { StackActivationModal } from './StackActivationModal';
+import { TripwireCard } from './TripwireCard';
+import { useAuth } from './AuthProvider';
+import { supabase } from './supabase';
 // The prompt requested importing useNavigate, but we are using onNavigate prop for compatibility.
 // However, I will keep the import if it's needed for type checking or future use, but commented out if unused to avoid lint errors.
 // import { useNavigate } from 'react-router-dom';

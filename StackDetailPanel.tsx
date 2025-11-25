@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import type { SolutionStack, Solution } from '../types';
-import { ALL_SOLUTIONS } from '../constants';
+import type { SolutionStack, Solution } from './types';
+import { ALL_SOLUTIONS } from './constants';
 import { BonusUnlockModal } from './BonusUnlockModal';
 
 interface StackDetailPanelProps {

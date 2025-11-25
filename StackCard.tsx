@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import type { SolutionStack, Page } from '../types';
-import { ALL_SOLUTIONS } from '../constants';
+import type { SolutionStack, Page } from './types';
+import { ALL_SOLUTIONS } from './constants';
 
 interface StackCardProps {
     stack: SolutionStack;

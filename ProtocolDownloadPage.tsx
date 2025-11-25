@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { CALCULATOR_LOGIC, EMAIL_SCRIPT, NICHE_LIST, VIDEO_SCRIPT } from '../tripwire-content';
-import { CopyBlock } from '../components/CopyBlock';
+import { CALCULATOR_LOGIC, EMAIL_SCRIPT, NICHE_LIST, VIDEO_SCRIPT } from './tripwire-content';
+import { CopyBlock } from './CopyBlock';
 
 interface ProtocolDownloadPageProps {
   onNavigate?: (page: any) => void;

@@ -2,8 +2,8 @@
 import React from 'react';
 import { FilterSection } from './FilterSection';
 import { CategoryFilterSection } from './CategoryFilterSection';
-import type { Filters } from '../types';
-import { categoryStructure, filterOptionsData } from '../constants';
+import type { Filters } from './types';
+import { categoryStructure, filterOptionsData } from './constants';
 
 interface FilterAccordionProps {
   activeFilters: Filters;

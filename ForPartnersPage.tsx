@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { useAuth } from '../contexts/AuthProvider';
-import { Page } from '../types';
+import { useAuth } from './AuthProvider';
+import { Page } from './types';
 
 interface ForPartnersPageProps {
     onNavigate?: (page: Page) => void;

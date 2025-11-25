@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import type { Filters } from '../types';
-import { categoryStructure, filterOptionsData } from '../constants';
+import type { Filters } from './types';
+import { categoryStructure, filterOptionsData } from './constants';
 import { CategoryFilterSection } from './CategoryFilterSection';
 import { FilterSection } from './FilterSection';
 

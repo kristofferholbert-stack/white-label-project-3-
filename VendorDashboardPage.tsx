@@ -1,6 +1,6 @@
 import React from 'react';
-import { VendorStats } from '../components/VendorStats';
-import { ListingOptimizer } from '../components/ListingOptimizer';
+import { VendorStats } from './VendorStats';
+import { ListingOptimizer } from './ListingOptimizer';
 
 export const VendorDashboardPage = () => {
     return (

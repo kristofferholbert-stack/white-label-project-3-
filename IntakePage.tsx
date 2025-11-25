@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import type { Page, HeroStack, IntakeResponse, SolutionStack } from '../types';
-import { CURATED_STACKS } from '../constants';
-import { StackDetailPanel } from '../components/StackDetailPanel';
-import { IdentityBadge } from '../components/IdentityBadge';
-import { GapAnalysis } from '../components/GapAnalysis';
-import { TripwireCard } from '../components/TripwireCard';
-import { LockedOverlay } from '../components/LockedOverlay';
-import { generateLaunchPlaybook } from '../services/geminiService';
-import { getSubscriptionStatus } from '../services/stripeService';
-import { supabase } from '../lib/supabase';
-import { useAuth } from '../contexts/AuthProvider';
+import type { Page, HeroStack, IntakeResponse, SolutionStack } from './types';
+import { CURATED_STACKS } from './constants';
+import { StackDetailPanel } from './StackDetailPanel';
+import { IdentityBadge } from './IdentityBadge';
+import { GapAnalysis } from './GapAnalysis';
+import { TripwireCard } from './TripwireCard';
+import { LockedOverlay } from './LockedOverlay';
+import { generateLaunchPlaybook } from './geminiService';
+import { getSubscriptionStatus } from './stripeService';
+import { supabase } from './supabase';
+import { useAuth } from './AuthProvider';
 
 interface IntakePageProps {
   onNavigate: (page: Page) => void;

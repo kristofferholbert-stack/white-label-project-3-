@@ -1,5 +1,5 @@
 import React from 'react';
-import type { JourneyData, Filters } from '../types';
+import type { JourneyData, Filters } from './types';
 
 interface FilterSummaryCardProps {
   journeyData: JourneyData;

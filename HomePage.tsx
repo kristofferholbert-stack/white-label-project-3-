@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import type { Page } from '../types';
-import { SEARCH_PAGE_INSPIRATIONS, BUSINESS_IN_A_BOX_INSPIRATIONS, ENHANCED_INSPIRATIONS, CURATED_STACKS } from '../constants';
-import { RevenueGoalModal } from '../components/RevenueGoalModal';
-import { BlueprintLoader } from '../components/BlueprintLoader';
+import type { Page } from './types';
+import { SEARCH_PAGE_INSPIRATIONS, BUSINESS_IN_A_BOX_INSPIRATIONS, ENHANCED_INSPIRATIONS, CURATED_STACKS } from './constants';
+import { RevenueGoalModal } from './RevenueGoalModal';
+import { BlueprintLoader } from './BlueprintLoader';
 
 interface HomePageProps {
   onNavigate: (page: Page, context?: any) => void;

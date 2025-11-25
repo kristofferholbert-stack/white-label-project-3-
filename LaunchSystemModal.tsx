@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import type { SolutionStack, ManagedVendor } from '../types';
-import { ALL_SOLUTIONS } from '../constants';
+import type { SolutionStack, ManagedVendor } from './types';
+import { ALL_SOLUTIONS } from './constants';
 
 interface LaunchSystemModalProps {
   isOpen: boolean;

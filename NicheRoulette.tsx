@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ROI_PROTOCOL_PRODUCT } from '../constants';
+import { ROI_PROTOCOL_PRODUCT } from './constants';
 
 interface Niche {
   name: string;

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import type { Priorities, ProfitabilityEstimates } from '../types';
-import { getNicheProfitabilityEstimates } from '../services/geminiService';
+import type { Priorities, ProfitabilityEstimates } from './types';
+import { getNicheProfitabilityEstimates } from './geminiService';
 
 
 // Icons

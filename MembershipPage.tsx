@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { MEMBERSHIP_TIERS } from '../constants';
-import { createCheckoutSession } from '../services/stripeService';
-import { useAuth } from '../contexts/AuthProvider';
+import { MEMBERSHIP_TIERS } from './constants';
+import { createCheckoutSession } from './stripeService';
+import { useAuth } from './AuthProvider';
 
 // Icons
 const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary-500"><polyline points="20 6 9 17 4 12"/></svg>;

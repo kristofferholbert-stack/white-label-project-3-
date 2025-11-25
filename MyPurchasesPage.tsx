@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { marketplaceService, type Purchase } from '../services/marketplaceService';
-import { useAuth } from '../contexts/AuthProvider';
-import type { Page } from '../types';
+import { marketplaceService, type Purchase } from './marketplaceService';
+import { useAuth } from './AuthProvider';
+import type { Page } from './types';
 
 interface MyPurchasesPageProps {
   onNavigate: (page: Page) => void;

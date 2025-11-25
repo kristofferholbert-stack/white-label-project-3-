@@ -1,17 +1,17 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import type { Page, SolutionStack, Solution, JourneyData, Priorities } from '../types';
-import { ALL_SOLUTIONS, CURATED_STACKS, HERO_STACKS, filterOptionsData, categoryStructure } from '../constants';
-import { StackDetailPanel } from '../components/StackDetailPanel';
-import { MobileFilterDrawer } from '../components/MobileFilterDrawer';
-import { FilterSection } from '../components/FilterSection';
-import { HeroStackCard, StackDetailInline } from '../components/HeroStackComponents';
-import { SolutionCard } from '../components/SolutionCard';
-import { LockedOverlay } from '../components/LockedOverlay';
-import { useAuth } from '../contexts/AuthProvider';
-import { getSubscriptionStatus } from '../services/stripeService';
-import { ComparisonModal } from '../components/ComparisonModal';
-import { ComparisonTray } from '../components/ComparisonTray';
-import { supabase } from '../lib/supabase';
+import type { Page, SolutionStack, Solution, JourneyData, Priorities } from './types';
+import { ALL_SOLUTIONS, CURATED_STACKS, HERO_STACKS, filterOptionsData, categoryStructure } from './constants';
+import { StackDetailPanel } from './StackDetailPanel';
+import { MobileFilterDrawer } from './MobileFilterDrawer';
+import { FilterSection } from './FilterSection';
+import { HeroStackCard, StackDetailInline } from './HeroStackComponents';
+import { SolutionCard } from './SolutionCard';
+import { LockedOverlay } from './LockedOverlay';
+import { useAuth } from './AuthProvider';
+import { getSubscriptionStatus } from './stripeService';
+import { ComparisonModal } from './ComparisonModal';
+import { ComparisonTray } from './ComparisonTray';
+import { supabase } from './supabase';
 
 interface MarketplacePageProps {
     onNavigate: (page: Page, context?: any) => void;

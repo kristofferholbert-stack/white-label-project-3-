@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import type { SolutionStack } from '../types';
-import { ALL_SOLUTIONS } from '../constants';
-import { supabase } from '../lib/supabase';
-import { useAuth } from '../contexts/AuthProvider';
-import { CopyBlock } from '../components/CopyBlock';
-import { SALES_SCRIPTS, LEGAL_TEMPLATES, UNIVERSAL_ONBOARDING, PERFECT_CALENDAR, REACTIVATION_ASSETS, ECOM_ASSETS } from '../assets';
+import type { SolutionStack } from './types';
+import { ALL_SOLUTIONS } from './constants';
+import { supabase } from './supabase';
+import { useAuth } from './AuthProvider';
+import { CopyBlock } from './CopyBlock';
+import { SALES_SCRIPTS, LEGAL_TEMPLATES, UNIVERSAL_ONBOARDING, PERFECT_CALENDAR, REACTIVATION_ASSETS, ECOM_ASSETS } from './assets';
 
 interface StackActivationPageProps {
     stack: SolutionStack | null;

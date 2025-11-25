@@ -1,11 +1,11 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import type { ManagedVendor, Client, Page, SolutionStack, Solution } from '../types';
-import { AddVendorModal } from '../components/AddVendorModal';
-import { supabase } from '../lib/supabase';
-import { useAuth } from '../contexts/AuthProvider';
-import { IdentityBadge } from '../components/IdentityBadge';
-import { CURATED_STACKS, ALL_SOLUTIONS, HERO_STACKS } from '../constants';
+import type { ManagedVendor, Client, Page, SolutionStack, Solution } from './types';
+import { AddVendorModal } from './AddVendorModal';
+import { supabase } from './supabase';
+import { useAuth } from './AuthProvider';
+import { IdentityBadge } from './IdentityBadge';
+import { CURATED_STACKS, ALL_SOLUTIONS, HERO_STACKS } from './constants';
 
 interface DashboardPageProps {
     vendors: ManagedVendor[];

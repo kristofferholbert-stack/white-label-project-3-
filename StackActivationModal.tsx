@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import type { Solution } from '../types';
-import { AFFILIATE_LINKS } from '../affiliates';
+import type { Solution } from './types';
+import { AFFILIATE_LINKS } from './affiliates';
 
 interface StackActivationModalProps {
     isOpen: boolean;

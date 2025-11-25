@@ -1,5 +1,5 @@
 import React from 'react';
-import { NicheRoulette } from '../components/NicheRoulette';
+import { NicheRoulette } from './NicheRoulette';
 
 export const NichePickerPage: React.FC = () => {
     return (

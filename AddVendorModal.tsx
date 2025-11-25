@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import type { ManagedVendor } from '../types';
-import { ALL_SOLUTIONS } from '../constants';
+import type { ManagedVendor } from './types';
+import { ALL_SOLUTIONS } from './constants';
 
 interface AddVendorModalProps {
   isOpen: boolean;

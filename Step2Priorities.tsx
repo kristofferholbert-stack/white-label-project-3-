@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import type { Priorities } from '../types';
+import type { Priorities } from './types';
 
 interface Step2PrioritiesProps {
   priorities: Priorities;

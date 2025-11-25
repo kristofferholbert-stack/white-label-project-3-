@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Page } from '../types';
+import type { Page } from './types';
 
 interface FooterProps {
     onNavigate: (page: Page) => void;
