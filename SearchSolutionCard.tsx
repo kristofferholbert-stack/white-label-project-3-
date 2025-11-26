@@ -200,14 +200,6 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ solution, isSelectedForComp
                     <span className={`text-sm font-medium transition-colors ${isSelectedForCompare ? 'text-primary-400' : 'text-slate-400 group-hover/compare:text-slate-200'} ${isCompareListFull && !isSelectedForCompare ? 'opacity-50' : ''}`}>Compare</span>
                 </label>
                 <div className="flex items-center gap-3">
-                    <a
-                         href={`#demoMode?type=${solution.primaryCategory === 'Marketing & Advertising' || solution.primaryCategory === 'Fintech, Blockchain & Web3' ? 'growth' : solution.primaryCategory === 'Industry-Specific Platforms' ? 'reputation' : 'ops'}`}
-                         target="_blank"
-                         rel="noreferrer"
-                         className="flex items-center gap-2 px-3 py-2 text-xs font-bold text-slate-400 hover:text-white border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
-                    >
-                        <EyeIcon /> Demo
-                    </a>
                     <button onClick={() => onViewDetails(solution)} className="px-5 py-2 bg-orange-gradient text-white text-sm font-bold rounded-lg hover:brightness-110 transition-all shadow-lg shadow-orange-900/20">
                        View Details
                     </button>

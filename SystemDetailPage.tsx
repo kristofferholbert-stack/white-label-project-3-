@@ -270,10 +270,6 @@ export const SystemDetailPage: React.FC<SystemDetailPageProps> = ({ stack, onBac
     
     const totalSavings = useMemo(() => stack.replaces.reduce((acc, tool) => acc + tool.estimatedCost, 0), [stack.replaces]);
 
-    const handleDemoNavigate = () => {
-        const type = stack.category === 'Marketing' || stack.category === 'Fintech' ? 'growth' : stack.category === 'Industry Platforms' ? 'reputation' : 'ops';
-        window.location.hash = `#demoMode?type=${type}`;
-    };
 
     const handleToggleBookmark = async () => {
         if (!user) {
@@ -356,12 +352,6 @@ export const SystemDetailPage: React.FC<SystemDetailPageProps> = ({ stack, onBac
                                 className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 border border-transparent bg-gradient-to-r from-orange-500 to-orange-600 text-lg font-bold rounded-xl text-white hover:scale-105 transition-transform shadow-xl shadow-orange-900/20"
                             >
                                 <LockOpenIcon /> Unlock Bonuses & Start Trial
-                            </button>
-                            <button
-                                onClick={handleDemoNavigate}
-                                className="w-full inline-flex items-center justify-center gap-2 px-6 py-2 border border-slate-200 text-slate-600 font-semibold rounded-lg hover:bg-slate-50 transition-colors"
-                            >
-                                <EyeIcon /> Demo with Client (Safe Mode)
                             </button>
                         </div>
                     </div>

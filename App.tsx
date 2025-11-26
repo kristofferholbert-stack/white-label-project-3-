@@ -32,7 +32,6 @@ import { ImplementationPage } from './ImplementationPage';
 import { MarketplacePage } from './MarketplacePage';
 import { VendorSubmitPage } from './VendorSubmitPage';
 import { MyPurchasesPage } from './MyPurchasesPage';
-import { DemoModePage } from './DemoModePage';
 import { NichePickerPage } from './NichePickerPage';
 import { ContactPage } from './ContactPage';
 import { TermsPage } from './TermsPage';
@@ -439,8 +438,6 @@ function AppContent() {
         return <MembershipPage />;
       case 'implementation':
         return <ImplementationPage />;
-      case 'demoMode':
-        return <DemoModePage />;
       case 'nichePicker':
         return <NichePickerPage />;
       case 'contact':
@@ -462,12 +459,12 @@ function AppContent() {
   return (
     <div className="min-h-screen flex flex-col font-sans relative">
       {isBuildingBlueprint && <BlueprintLoader />}
-      {page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && page !== 'demoMode' && <Header user={authUser ? { email: authUser.email || '', type: 'agency' } : null} onNavigate={handleNavigate} onLogout={handleLogout} />}
+      {page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && <Header user={authUser ? { email: authUser.email || '', type: 'agency' } : null} onNavigate={handleNavigate} onLogout={handleLogout} />}
       <div className="flex-grow">
         {renderPage()}
       </div>
-      {page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && page !== 'demoMode' && !['login', 'signup'].includes(page) && <Footer onNavigate={handleNavigate} onSelectPost={handleSelectPost} />}
-      {authUser && page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && page !== 'demoMode' && <AgencyCopilot
+      {page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && !['login', 'signup'].includes(page) && <Footer onNavigate={handleNavigate} onSelectPost={handleSelectPost} />}
+      {authUser && page !== 'clientPortal' && page !== 'intake' && page !== 'stackActivation' && <AgencyCopilot
         clients={clients}
         managedVendors={managedVendors}
         activeClient={activeClient}

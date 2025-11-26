@@ -1,5 +1,5 @@
 
-export type Page = 'home' | 'about' | 'blog' | 'search' | 'blogPost' | 'dashboard' | 'clients' | 'addClient' | 'clientDetail' | 'clientPortal' | 'stacks' | 'forAgencies' | 'forPartners' | 'login' | 'signup' | 'vendorDashboard' | 'solutionDetail' | 'inspirations' | 'systemDetail' | 'businessInABox' | 'intake' | 'stackActivation' | 'resellKits' | 'kitViewer' | 'membership' | 'implementation' | 'marketplace' | 'vendorSubmit' | 'myPurchases' | 'demoMode' | 'nichePicker' | 'contact' | 'terms' | 'privacy' | 'protocolDownload' | 'getStarted' | 'playbooks';
+export type Page = 'home' | 'about' | 'blog' | 'search' | 'blogPost' | 'dashboard' | 'clients' | 'addClient' | 'clientDetail' | 'clientPortal' | 'stacks' | 'forAgencies' | 'forPartners' | 'login' | 'signup' | 'vendorDashboard' | 'solutionDetail' | 'inspirations' | 'systemDetail' | 'businessInABox' | 'intake' | 'stackActivation' | 'resellKits' | 'kitViewer' | 'membership' | 'implementation' | 'marketplace' | 'vendorSubmit' | 'myPurchases' | 'nichePicker' | 'contact' | 'terms' | 'privacy' | 'protocolDownload' | 'getStarted' | 'playbooks';
 
 export interface User {
     email: string;

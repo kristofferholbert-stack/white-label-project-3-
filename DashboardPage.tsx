@@ -105,12 +105,6 @@ const RoadmapToFirstDollar: React.FC<{
             isCompleted: deckCustomized,
             action: (
                 <div className="flex items-center gap-4 mt-2">
-                     <button
-                        onClick={() => onNavigate('demoMode', { type: 'growth' })}
-                        className="flex items-center gap-2 px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded-md text-xs font-bold text-white transition-colors"
-                    >
-                        <PlayCircleIcon /> Open Editor
-                    </button>
                     <label className="flex items-center gap-2 text-xs text-slate-400 cursor-pointer">
                         <input type="checkbox" checked={deckCustomized} onChange={handleDeckToggle} className="rounded border-slate-600 bg-slate-700 text-primary-500" />
                         Mark as Done
