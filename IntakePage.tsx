@@ -372,6 +372,12 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
 
     const recommendedStacks = CURATED_STACKS.slice(0, 3);
 
+    console.log('IntakePage: Recommended Stacks', {
+        totalStacks: CURATED_STACKS.length,
+        recommendedCount: recommendedStacks.length,
+        stackNames: recommendedStacks.map(s => s.name)
+    });
+
     const handleLaunchStack = async (stack: SolutionStack) => {
         const userNiche = answers.niches[0] || stack.targetNiche;
 
@@ -515,6 +521,15 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     if (showResults) {
         const finalTargetMRR = currentMRR + targetMRR;
 
+        console.log('IntakePage: Rendering results', {
+            showResults,
+            currentMRR,
+            targetMRR,
+            finalTargetMRR,
+            recommendedStacksCount: recommendedStacks.length,
+            currentLevel: currentLevel.name
+        });
+
         return (
             <main className="min-h-screen bg-gray-950 p-4 sm:p-8 relative">
                 {selectedStack && <StackDetailPanel stack={selectedStack} onClose={() => setSelectedStack(null)} onLaunch={handleLaunchStack} />}
@@ -606,10 +621,31 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                         </button>
                     </div>
 
-                    <h2 className="text-xl font-bold text-slate-300 mb-6 pl-2">Recommended for Your Identity Level</h2>
+                    <div className="bg-slate-900 border-2 border-primary-500/30 rounded-2xl p-8 mb-8">
+                        <div className="text-center mb-8">
+                            <div className="inline-block px-4 py-2 bg-primary-500/20 rounded-full mb-4">
+                                <span className="text-primary-400 font-bold text-sm uppercase tracking-wider">⚡ Curated for You</span>
+                            </div>
+                            <h2 className="text-3xl font-bold text-white mb-3">Recommended Stacks for {currentLevel.name}</h2>
+                            <p className="text-slate-400 max-w-2xl mx-auto">
+                                Based on your {answers.agencyType} status and desire to add {answers.desiredAddons.join(', ')}, here are the exact stacks used by successful agencies at your level.
+                            </p>
+                        </div>
+                    </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {recommendedStacks.map((stack, index) => {
+                        {recommendedStacks.length === 0 ? (
+                            <div className="col-span-2 text-center py-12">
+                                <p className="text-slate-400 text-lg mb-4">No stacks available at the moment.</p>
+                                <button
+                                    onClick={() => onNavigate('marketplace')}
+                                    className="px-6 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-500"
+                                >
+                                    Browse All Stacks
+                                </button>
+                            </div>
+                        ) : (
+                            recommendedStacks.map((stack, index) => {
                             const isLocked = !isSubscribed && index > 0;
 
                             return (
@@ -667,7 +703,8 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                                     </div>
                                 </div>
                             );
-                        })}
+                        })
+                        )}
                     </div>
 
                     <div className="text-center pb-16 space-y-4">
