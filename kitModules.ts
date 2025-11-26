@@ -3035,6 +3035,642 @@ That's an extra $735/month in your pocket with DIY stack, or $8,820/year.`
               ],
               note: 'There is no "wrong" choice. Pick the stack that matches your technical comfort level and target client profile.'
             }
+          },
+          {
+            id: 'lesson-2-2',
+            title: 'Google Business Profile Review Link Setup',
+            type: 'text',
+            duration: '15 min',
+            description: 'How to create the direct review link that converts 3x better',
+            content: {
+              sections: [
+                {
+                  heading: 'Why Direct Links Matter',
+                  body: `Asking someone to "find us on Google and leave a review" has a 2-4% completion rate. Sending a direct link to the review form has a 15-18% completion rate.
+
+**The Math:**
+• 100 customers × 2% = 2 reviews (traditional ask)
+• 100 customers × 16% = 16 reviews (direct link)
+
+That is 8x more reviews with the same effort.
+
+**How to Find Your Google Review Link:**
+
+**Method 1: Using Place ID (Recommended)**
+1. Go to https://developers.google.com/maps/documentation/places/web-service/place-id
+2. Enter your business name and location
+3. Copy the Place ID (example: ChIJN1t_tDeuEmsRUsoyG83frY4)
+4. Your review link: https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID
+
+**Method 2: From Google Business Profile**
+1. Log into Google Business Profile
+2. Click "Get more reviews"
+3. Copy the short URL (example: g.page/r/...)
+4. This redirects to the full review link
+
+**Method 3: Manual Search**
+1. Search for your business on Google
+2. Click "Write a review"
+3. Copy the URL from browser address bar
+4. Clean up any unnecessary parameters
+
+**Best Practice:**
+Use a URL shortener (bit.ly, rebrandly) to create a branded short link:
+• Original: https://search.google.com/local/writereview?placeid=ChIJN1t...
+• Shortened: youragency.link/clientname-review
+
+This looks more professional in SMS/email and is easier to track.`
+                },
+                {
+                  heading: 'Setting Up Review Links for Other Platforms',
+                  body: `**Facebook Reviews:**
+1. Go to your Facebook Business Page
+2. Click "Reviews" tab
+3. Your review link: facebook.com/YOUR_PAGE_NAME/reviews
+4. Or: facebook.com/pg/YOUR_PAGE_NAME/reviews/
+
+**Yelp Reviews:**
+1. Find your Yelp business page
+2. Copy the URL
+3. Add /writeareview at the end
+4. Example: yelp.com/biz/business-name-city/writeareview
+
+**Trustpilot (if applicable):**
+1. Log into Trustpilot business account
+2. Go to "Get more reviews"
+3. Copy your unique review invitation link
+
+**Industry-Specific Sites:**
+• Avvo (lawyers): avvo.com/rate-lawyer/...
+• Healthgrades (doctors): healthgrades.com/physician/...
+• HomeAdvisor (contractors): homeadvisor.com/rated/...
+• TripAdvisor (hospitality): tripadvisor.com/UserReview-...
+
+**Pro Tip:** Create a spreadsheet for each client with all their review links so you can quickly grab them when setting up automations.`
+                }
+              ],
+              note: 'The direct review link is the single most important element of your review generation system. Get this right first.'
+            }
+          },
+          {
+            id: 'lesson-2-3',
+            title: 'Setting Up Automated Review Requests with Zapier',
+            type: 'text',
+            duration: '30 min',
+            description: 'Step-by-step workflow automation for DIY stack',
+            content: {
+              sections: [
+                {
+                  heading: 'The Complete DIY Automation Workflow',
+                  body: `This lesson walks you through building a complete review automation system using Zapier, JotForm, and Twilio.
+
+**What You Will Build:**
+1. Customer completes service → trigger
+2. Satisfaction survey sent via SMS within 2 hours
+3. Based on rating, smart routing:
+   • 4-5 stars → Send review request
+   • 1-3 stars → Send private feedback form
+4. Follow-up reminder after 3 days if no action
+5. All responses logged in Google Sheets
+
+**Cost:** About $50-75/month (scales to unlimited clients)
+**Setup Time:** 3-4 hours first time, 1 hour for subsequent clients
+**Conversion Rate:** 15-18% leave reviews
+
+Let us build it step by step.`
+                },
+                {
+                  heading: 'Step 1: Create Satisfaction Survey in JotForm',
+                  body: `**Create the Survey:**
+1. Sign up for JotForm ($39/mo plan)
+2. Create new form: "Customer Satisfaction Survey"
+3. Add these fields:
+   • Customer Name (text field)
+   • Customer Phone (phone field, required)
+   • Rating (1-5 scale widget)
+   • Comments (text area, optional)
+4. Set form to "Thank you" message after submission
+5. Under Settings → Emails, disable confirmation email
+6. Get your form URL
+
+**Customize the Survey:**
+• Use client branding (logo, colors)
+• Keep it mobile-friendly (most will complete on phone)
+• Question: "On a scale of 1-5, how was your experience with [Business Name]?"
+• Make rating required, comments optional
+
+**Get Your Webhook URL:**
+1. Go to Settings → Integrations
+2. Search for "Webhooks"
+3. Copy the webhook URL (you will need this for Zapier)
+
+**Test It:**
+Fill out the survey yourself to make sure it works.`
+                },
+                {
+                  heading: 'Step 2: Set Up Twilio for SMS',
+                  body: `**Create Twilio Account:**
+1. Sign up at twilio.com
+2. Verify your phone number
+3. Purchase a phone number ($1/month)
+   • Choose a local number in client service area
+   • Ensure it has SMS capability
+4. Note your Account SID and Auth Token (you will need these)
+
+**Fund Your Account:**
+• SMS costs: $0.0075-0.02 per message
+• Budget $20-30/month per active client
+• 100 messages = $1-2
+
+**Compliance:**
+• Register your number (prevents being marked as spam)
+• Add opt-out language: "Reply STOP to unsubscribe"
+• Keep messages under 160 characters when possible
+
+**Test Your Number:**
+Send yourself a test SMS from Twilio dashboard to verify it works.`
+                },
+                {
+                  heading: 'Step 3: Build the Zapier Workflow',
+                  body: `**Zap 1: Survey Response to SMS Review Request (4-5 Stars)**
+
+**Trigger:** JotForm - New Submission
+• Connect your JotForm account
+• Select your satisfaction survey form
+• Test to ensure data flows correctly
+
+**Filter:** Only Continue If...
+• Rating is greater than or equal to 4
+(This ensures only happy customers get review requests)
+
+**Action 1:** Delay
+• Delay for: 5 minutes
+(Gives them time to finish the survey)
+
+**Action 2:** Twilio - Send SMS
+• To: {{Customer Phone}}
+• From: Your Twilio number
+• Message: "Hi {{Customer Name}}! Thanks for the 5-star rating! Would you mind sharing your experience on Google? It takes 60 seconds: [REVIEW LINK]"
+
+**Test the Zap** with a sample 5-star submission.
+
+---
+
+**Zap 2: Survey Response to Private Feedback (1-3 Stars)**
+
+**Trigger:** JotForm - New Submission
+(Same form as above)
+
+**Filter:** Only Continue If...
+• Rating is less than or equal to 3
+
+**Action 1:** Delay
+• Delay for: 5 minutes
+
+**Action 2:** Twilio - Send SMS
+• To: {{Customer Phone}}
+• From: Your Twilio number
+• Message: "Hi {{Customer Name}}, we are sorry we did not meet your expectations. Would you mind sharing what went wrong so we can make it right? [PRIVATE FEEDBACK FORM LINK]"
+
+**Action 3:** Send Email Notification (to client)
+• To: client@email.com
+• Subject: "Unhappy Customer Alert"
+• Body: "{{Customer Name}} gave a rating of {{Rating}}. Comments: {{Comments}}"
+
+This alerts the business owner immediately so they can address the issue.
+
+---
+
+**Zap 3: Follow-Up Reminder (3 Days Later)**
+
+**Trigger:** Google Sheets - New Row
+• Connect to your tracking spreadsheet
+• Watch for new rows (these are survey responses)
+
+**Filter:** Only Continue If...
+• Rating >= 4
+• Review Left = No
+• Days Since Survey = 3
+
+**Action:** Twilio - Send SMS
+• Message: "Hi {{Customer Name}}, just following up! If you have 60 seconds, we would really appreciate your review: [REVIEW LINK]"
+
+**Note:** This requires manual data entry initially. More advanced setups use webhooks to track if review was actually left.
+
+---
+
+**Zap 4: Log Everything to Google Sheets**
+
+**Trigger:** JotForm - New Submission
+
+**Action:** Google Sheets - Create Spreadsheet Row
+• Spreadsheet: "Client Reviews Tracker"
+• Row data:
+  - Customer Name: {{Name}}
+  - Phone: {{Phone}}
+  - Rating: {{Rating}}
+  - Date: {{Submission Date}}
+  - Review Link Sent: (Yes/No based on rating)
+  - Review Left: (manually update)
+
+This gives you a dashboard to track performance.`
+                }
+              ],
+              note: 'This DIY system takes 3-4 hours to set up the first time, but subsequent clients take only 1 hour. The cost savings over Podium ($3,000+ per year) pay for your time within 1-2 months.'
+            }
+          },
+          {
+            id: 'lesson-2-4',
+            title: 'Review Widget Setup for Client Websites',
+            type: 'text',
+            duration: '20 min',
+            description: 'Add social proof widgets that display latest reviews',
+            content: {
+              sections: [
+                {
+                  heading: 'Why Review Widgets Matter',
+                  body: `Displaying reviews on a client website:
+• Increases conversion rates by 15-20%
+• Provides real-time social proof
+• Shows the business is actively getting reviews
+• Gives you another touchpoint with the client
+
+**Options:**
+1. Google Reviews Widget (free, various providers)
+2. Birdeye/Podium built-in widget (if using those platforms)
+3. Custom widget using Google Places API
+4. Third-party widgets (EmbedSocial, Elfsight, etc.)
+
+Most clients do NOT have this set up, so adding it provides instant visual value.`
+                },
+                {
+                  heading: 'Option 1: Free Google Reviews Widget',
+                  body: `**Using EmbedReviews.com (Free Plan):**
+
+1. Go to embedreviews.com
+2. Enter business Google Place ID
+3. Customize appearance:
+   • Number of reviews to show (5-10)
+   • Layout (grid, slider, list)
+   • Colors to match client website
+   • Show/hide star ratings
+4. Generate embed code
+5. Copy the code snippet
+
+**Installing on Client Website:**
+
+**For WordPress:**
+• Go to Appearance → Widgets
+• Add "Custom HTML" widget
+• Paste the embed code
+• Place in sidebar or footer
+
+**For Other Platforms:**
+• Access website backend
+• Find where you want reviews to appear
+• Add HTML block
+• Paste embed code
+
+**Test:**
+Visit the website and verify reviews are displaying correctly.
+
+**Limitations of Free Plans:**
+• May show "Powered by" branding
+• Limited customization
+• 50-100 review loads per month
+
+For most small business clients, this is sufficient.`
+                },
+                {
+                  heading: 'Option 2: Premium Widgets',
+                  body: `**Elfsight Reviews Widget ($5-10/month):**
+
+**Benefits:**
+• No branding
+• Auto-updates when new reviews come in
+• Combine multiple platforms (Google + Facebook + Yelp)
+• More layout options
+• Better mobile responsive
+
+**Setup:**
+1. Sign up at elfsight.com
+2. Choose "Google Reviews" app
+3. Connect your Google Business Profile
+4. Customize design
+5. Get embed code
+6. Install on client website
+
+**Cost Structure:**
+• $5/month for basic (up to 10,000 views)
+• You can charge client $15-25/month for this add-on
+• Or include in your Growth/Enterprise packages
+
+**Other Options:**
+• EmbedSocial ($29/mo, combines social + reviews)
+• Tagembed ($18/mo, social media aggregator)
+• Custom development using Google Places API (advanced)
+
+**Best Practice:**
+For clients paying $797+/month, include a premium widget. For budget clients, use free options.`
+                }
+              ],
+              note: 'Adding a review widget to client websites provides instant visual proof of your work and increases perceived value of your service.'
+            }
+          },
+          {
+            id: 'lesson-2-5',
+            title: 'Monthly Reporting Dashboard Setup',
+            type: 'text',
+            duration: '25 min',
+            description: 'Create automated reports that prove your value every month',
+            content: {
+              sections: [
+                {
+                  heading: 'Why Monthly Reports Are Non-Negotiable',
+                  body: `The #1 reason clients cancel reputation management services: "I forgot what you were doing for me."
+
+Out of sight = out of mind = cancellation.
+
+**Solution:** Send a detailed monthly report showing:
+• Reviews gained this month
+• Total review count (now vs. start)
+• Average rating trend
+• Response rate to reviews
+• Comparison to competitors
+• Next month goals
+
+**Best Practice:**
+• Send report first week of each month
+• Include a summary paragraph in plain English
+• Schedule a 10-minute check-in call (for Growth+ tiers)
+• Ask for feedback or concerns
+
+**Result:** Churn drops from 15-20% to 5-8% annually when you send consistent reports.`
+                },
+                {
+                  heading: 'Building Your Report Template',
+                  body: `**Option 1: Google Data Studio (Free)**
+
+**Setup:**
+1. Go to datastudio.google.com
+2. Create new report: "Monthly Reputation Report"
+3. Add client logo at top
+4. Create sections:
+
+**Section 1: Executive Summary**
+• Text box with this month performance summary
+• Example: "In March, we generated 18 new 5-star reviews, bringing your total to 67. Your average rating improved from 4.2 to 4.4 stars."
+
+**Section 2: Reviews This Month**
+• Scorecard: New Reviews (18)
+• Scorecard: Total Reviews (67)
+• Scorecard: Average Rating (4.4 stars)
+• Bar chart: Reviews by platform
+
+**Section 3: Trends**
+• Time series chart: Reviews over time (last 6 months)
+• Time series chart: Average rating over time
+
+**Section 4: Competitor Comparison**
+• Table showing:
+  - Your Client: 67 reviews, 4.4 stars
+  - Competitor A: 45 reviews, 4.1 stars
+  - Competitor B: 52 reviews, 4.3 stars
+  - Competitor C: 38 reviews, 4.0 stars
+
+**Section 5: Review Highlights**
+• Manually add 2-3 best reviews from this month
+• Include customer name and review text
+
+**Section 6: Goals for Next Month**
+• Target: 15-20 new reviews
+• Action items: None (system is automated)
+
+**Save as PDF** and email to client.
+
+**Time Required:** 15 minutes per client per month once template is built.`
+                },
+                {
+                  heading: 'Option 2: Automated Reporting Tools',
+                  body: `**If Using Podium or Birdeye:**
+Both have built-in reporting. Just white-label it and send.
+
+**If Using DIY Stack:**
+Build reports using:
+• Google Data Studio (free, manual data entry)
+• AgencyAnalytics ($12-49/mo per client, automated)
+• Whatagraph ($199/mo, unlimited clients)
+• Custom solution using Google Sheets + Charts
+
+**Recommendation:**
+Start with Google Data Studio (free) for first 5-10 clients. Once you hit 15+ clients, invest in AgencyAnalytics or Whatagraph for automation.
+
+**Time Savings:**
+• Manual reporting: 15 min per client = 4 hours for 15 clients
+• Automated reporting: 2 min per client = 30 min for 15 clients
+
+At 15+ clients, automation pays for itself in saved time.`
+                }
+              ],
+              note: 'Monthly reporting is the insurance policy against churn. Never skip it.'
+            }
+          },
+          {
+            id: 'lesson-2-6',
+            title: 'Client Onboarding Checklist',
+            type: 'checklist',
+            duration: '10 min',
+            description: 'Complete setup checklist for new clients',
+            content: {
+              tasks: [
+                {
+                  day: 'Day 1: Contract Signed',
+                  items: [
+                    'Receive signed contract and first payment',
+                    'Send welcome email with timeline expectations',
+                    'Request access to Google Business Profile (admin or owner)',
+                    'Get list of customer contact info or CRM access',
+                    'Schedule kickoff call within 24-48 hours'
+                  ]
+                },
+                {
+                  day: 'Day 2-3: Technical Setup',
+                  items: [
+                    'Create client account in review software (Podium/Birdeye/DIY)',
+                    'Set up white-labeled client portal',
+                    'Configure automated satisfaction surveys',
+                    'Set up SMS/email review request workflows',
+                    'Create Google review link and test it',
+                    'Set up private feedback form for unhappy customers',
+                    'Build monthly report template with client branding'
+                  ]
+                },
+                {
+                  day: 'Day 4-5: Training & Launch',
+                  items: [
+                    'Train client staff on asking for reviews (if manual component)',
+                    'Send test review request to yourself to verify system works',
+                    'Set up review widget on client website',
+                    'Configure review response templates',
+                    'Schedule first monthly review call',
+                    'Send launch confirmation email to client',
+                    'Begin monitoring for new reviews daily'
+                  ]
+                },
+                {
+                  day: 'Day 30: First Results Check',
+                  items: [
+                    'Count reviews generated in first 30 days',
+                    'Send first monthly report',
+                    'Conduct check-in call to gather feedback',
+                    'Make any necessary adjustments to system',
+                    'Ask for testimonial if client is happy',
+                    'Request referrals to similar businesses'
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        id: 'module-3',
+        title: 'Module 3: Sales & Client Acquisition',
+        description: 'Master cold outreach, discovery calls, and closing deals',
+        estimatedTime: '2 hours',
+        lessons: [
+          {
+            id: 'lesson-3-1',
+            title: 'The Bad Review Firefighter Cold Outreach Script',
+            type: 'text',
+            duration: '20 min',
+            description: 'The proven email that gets 12-18% response rates',
+            content: {
+              sections: [
+                {
+                  heading: 'Why This Script Works',
+                  body: `Most cold emails for reputation management say: "Want more reviews?"
+
+The problem: Businesses know they need more reviews, but it is not urgent.
+
+**The Bad Review Firefighter approach flips this:**
+"I noticed you have a 1-star review from 3 months ago with no response. This is costing you customers every single day."
+
+**Psychology:**
+• Pain (bad review) > Gain (more reviews)
+• Fear of loss > Desire for gain
+• Urgency (happening now) > Future benefit
+
+**Result:** 12-18% response rate vs. 2-4% for "want more reviews?" emails.`
+                },
+                {
+                  heading: 'The Complete Email Template',
+                  body: `**Subject Line Options (A/B test these):**
+1. "Your 1-star review on Google"
+2. "Question about [Business Name] reputation"
+3. "Saw your Google reviews - quick question"
+4. "[First Name], noticed an issue with your reviews"
+
+**Email Body:**
+
+Hi [First Name],
+
+I was researching [Industry] businesses in [City] and came across [Business Name].
+
+I noticed you have [X] reviews on Google with a [Y] star average. What caught my attention was a [1 or 2] star review from [Month] that hasn not been responded to.
+
+This is a problem because:
+• 89% of consumers read business responses to reviews
+• No response signals you do not care about customer feedback
+• That negative review is likely costing you 5-10 customers per month
+
+I help [Industry] businesses like yours:
+✓ Prevent negative reviews from being published (catch unhappy customers first)
+✓ Generate 10-20 new 5-star reviews per month automatically
+✓ Respond to all reviews professionally within 24 hours
+
+Would you be open to a 15-minute call this week to discuss how we could help [Business Name] improve its online reputation?
+
+[Your Name]
+[Your Agency]
+[Phone]
+
+P.S. If you are not the right person to speak with about this, could you point me in the right direction?
+
+---
+
+**Why This Works:**
+
+1. **Specific observation** (not generic)
+2. **Identifies real problem** (the negative review)
+3. **Quantifies impact** (5-10 customers/month)
+4. **Offers solution** (prevention + generation)
+5. **Low-commitment ask** (15 minutes, not "buy now")
+6. **P.S. gives easy out** (reduces resistance)
+
+**Expected Response Rate:** 12-18% will reply
+**Of Those:** 50-60% will book a call
+**Close Rate:** 30-40% of calls become clients
+
+**Math:**
+• Send 100 emails
+• 15 responses
+• 8 booked calls
+• 3 new clients
+
+At $797/month, that is $2,391/month in new recurring revenue from 100 emails.`
+                },
+                {
+                  heading: 'Finding Businesses to Target',
+                  body: `**Criteria for Good Prospects:**
+1. In your chosen niche
+2. Less than 25 Google reviews
+3. Have at least 1 negative review (2 stars or lower)
+4. No response to that negative review
+5. Located in your service area
+
+**How to Find Them:**
+
+**Method 1: Google Maps Search**
+1. Search "[Your Niche] near [City]"
+2. Browse results and click each business
+3. Check review count and recent reviews
+4. Save businesses that meet criteria to spreadsheet
+
+**Method 2: Scraping Tools**
+• Outscraper.com ($10-30/month)
+• LocalBusinessScraper ($49/month)
+• Lets you export 100s of businesses with review data
+
+**Method 3: Manual Research**
+• Use Google Maps
+• Check Facebook pages
+• Look at Yelp listings
+• Check industry directories
+
+**Build Your List:**
+Create spreadsheet with:
+• Business Name
+• Owner Name (if you can find it)
+• Email Address
+• Phone Number
+• Current Review Count
+• Average Rating
+• Link to Bad Review (for reference)
+
+**Goal:** Build list of 100-200 qualified prospects before starting outreach.
+
+**Where to Find Email Addresses:**
+• Business website contact page
+• Hunter.io (finds email patterns)
+• LinkedIn (look up owner/manager)
+• Call and ask for "person who handles marketing"
+
+**Time Required:** 2-3 hours to build list of 100 businesses.`
+                }
+              ],
+              note: 'The Bad Review Firefighter approach works because it leads with a problem they have RIGHT NOW, not a future benefit.'
+            }
           }
         ]
       }
