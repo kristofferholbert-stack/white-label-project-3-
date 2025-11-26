@@ -10,24 +10,65 @@ const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" heigh
 const LockIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>;
 const EyeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>;
 
+const SocialProofBanner = () => (
+  <div className="max-w-7xl mx-auto mb-12 px-4">
+    <div className="bg-gradient-to-r from-slate-900 to-slate-800 border border-emerald-500/20 rounded-2xl p-6 md:p-8">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex-1 text-center md:text-left">
+          <p className="text-emerald-400 text-sm font-bold uppercase tracking-wider mb-2">Trusted by 2,450+ Agencies</p>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+            Join agencies generating <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">$10k-50k/month</span>
+          </h3>
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-4">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">2,450+</div>
+              <div className="text-xs text-slate-400 uppercase tracking-wide">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-emerald-400">$12M+</div>
+              <div className="text-xs text-slate-400 uppercase tracking-wide">Revenue Generated</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-teal-400">4.9/5</div>
+              <div className="text-xs text-slate-400 uppercase tracking-wide">Avg Rating</div>
+            </div>
+          </div>
+        </div>
+        <div className="flex-shrink-0">
+          <div className="flex -space-x-2">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 border-2 border-slate-900 flex items-center justify-center text-white font-bold text-sm">
+                {String.fromCharCode(65 + i)}
+              </div>
+            ))}
+            <div className="w-10 h-10 rounded-full bg-slate-800 border-2 border-slate-900 flex items-center justify-center text-slate-400 font-bold text-xs">
+              +2k
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const MembershipUpsellBanner = () => (
-  <div className="relative w-full max-w-7xl mx-auto mb-16 overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 p-1 shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
+  <div className="relative w-full max-w-7xl mx-auto mb-16 overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 p-1 shadow-2xl transform hover:scale-[1.01] transition-transform duration-300">
     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
     <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-900/90 backdrop-blur-sm p-8 rounded-xl h-full">
       <div className="flex-1 text-center md:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-bold uppercase tracking-wider mb-3">
-          <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           Limited Time Offer
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-          Want all these kits for <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-300">FREE?</span>
+          Want all these kits for <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">FREE?</span>
         </h2>
         <p className="text-slate-300 text-lg">
-          Join the <strong>Inner Circle</strong> ($99/mo) and get <span className="text-white font-bold underline decoration-indigo-400 decoration-2 underline-offset-2">1 Free Kit</span> every single month.
+          Join the <strong>Inner Circle</strong> ($99/mo) and get <span className="text-white font-bold underline decoration-emerald-400 decoration-2 underline-offset-2">1 Free Kit</span> every single month.
         </p>
       </div>
       <div className="flex-shrink-0">
-        <button className="px-8 py-4 bg-white text-indigo-900 font-bold rounded-xl hover:bg-indigo-50 hover:scale-105 transition-all shadow-xl hover:shadow-indigo-500/25 flex items-center gap-2 group">
+        <button className="px-8 py-4 bg-white text-emerald-900 font-bold rounded-xl hover:bg-emerald-50 hover:scale-105 transition-all shadow-xl hover:shadow-emerald-500/25 flex items-center gap-2 group">
           Join Inner Circle
           <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -97,12 +138,20 @@ export const ResellKitsPage: React.FC<ResellKitsPageProps> = ({ onNavigate }) =>
             {/* Main Content */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
 
+                <SocialProofBanner />
                 <MembershipUpsellBanner />
 
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {RESELL_KITS.map((kit) => (
-                        <div key={kit.id} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 group flex flex-col h-full">
-                            
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                    {RESELL_KITS.map((kit, index) => (
+                        <div key={kit.id} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 group flex flex-col h-full relative overflow-hidden">
+
+                            {/* Urgency Badge - Top Right */}
+                            {index === 0 && (
+                                <div className="absolute top-4 right-4 z-20 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg animate-pulse">
+                                    🔥 12 joined this week
+                                </div>
+                            )}
+
                             {/* Product Shot Area */}
                             <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-slate-700 bg-slate-800 group-hover:border-emerald-500/30 transition-colors">
                                 {/* Background Image */}

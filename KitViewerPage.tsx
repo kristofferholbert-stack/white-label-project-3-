@@ -71,6 +71,8 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isLocalStorage, setIsLocalStorage] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [milestoneReached, setMilestoneReached] = useState<number | null>(null);
 
   // Listen for hash changes
   useEffect(() => {
@@ -188,6 +190,19 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
       : [...completedLessons, lessonId];
 
     setCompletedLessons(newCompletedState);
+
+    // Celebrate completion with confetti
+    if (!isCompleted) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 3000);
+
+      // Check for milestone achievements
+      const newProgress = course ? Math.round((newCompletedState.length / course.modules.reduce((sum, m) => sum + m.lessons.length, 0)) * 100) : 0;
+      if (newProgress === 25 || newProgress === 50 || newProgress === 75) {
+        setMilestoneReached(newProgress);
+        setTimeout(() => setMilestoneReached(null), 5000);
+      }
+    }
 
     // If user is logged in, save to database
     if (user) {
@@ -496,7 +511,7 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
                           e.stopPropagation();
                           markLessonComplete(lesson.id);
                         }}
-                        className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all hover:scale-110 ${
+                        className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all hover:scale-110 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:outline-none ${
                           isCompleted
                             ? 'bg-emerald-500 border-emerald-500'
                             : isActive
@@ -504,6 +519,7 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
                             : 'border-slate-600 hover:border-slate-400'
                         }`}
                         title={isCompleted ? 'Mark as incomplete' : 'Mark as complete'}
+                        aria-label={`${isCompleted ? 'Mark as incomplete' : 'Mark as complete'}: ${lesson.title}`}
                       >
                         {isCompleted && (
                           <CheckIcon />
@@ -652,7 +668,8 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
               }
             }}
             disabled={!getPreviousLesson() || isTransitioning}
-            className="px-4 md:px-6 py-2.5 bg-slate-800 border border-slate-700 text-white rounded-lg text-sm font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg hover:shadow-xl"
+            className="px-4 md:px-6 py-2.5 bg-slate-800 border border-slate-700 text-white rounded-lg text-sm font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-950 focus:outline-none"
+            aria-label="Go to previous lesson"
           >
             <ChevronLeftIcon />
             <span className="hidden sm:inline">Previous Lesson</span>
@@ -682,7 +699,8 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
               }
             }}
             disabled={!getNextLesson() || isTransitioning}
-            className="px-4 md:px-6 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg text-sm font-semibold hover:from-emerald-500 hover:to-teal-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg hover:shadow-xl"
+            className="px-4 md:px-6 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg text-sm font-semibold hover:from-emerald-500 hover:to-teal-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950 focus:outline-none"
+            aria-label="Go to next lesson"
           >
             <span className="hidden sm:inline">Next Lesson</span>
             <span className="sm:hidden">Next</span>
@@ -739,6 +757,52 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
           </div>
         </div>
       )}
+
+      {/* Confetti Animation */}
+      {showConfetti && (
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 rounded-full animate-confetti"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: '-10px',
+                backgroundColor: ['#10b981', '#14b8a6', '#f59e0b', '#ef4444', '#3b82f6'][Math.floor(Math.random() * 5)],
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Milestone Celebration Modal */}
+      {milestoneReached && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fade-in">
+          <div className="bg-gradient-to-br from-emerald-900 to-teal-900 border-2 border-emerald-500 rounded-2xl p-8 max-w-md mx-4 shadow-2xl transform animate-bounce-in">
+            <div className="text-center">
+              <div className="text-6xl mb-4">🎉</div>
+              <h2 className="text-3xl font-bold text-white mb-2">
+                {milestoneReached}% Complete!
+              </h2>
+              <p className="text-emerald-200 text-lg mb-6">
+                {milestoneReached === 25 && "Great start! You're building momentum!"}
+                {milestoneReached === 50 && "Halfway there! You're crushing it!"}
+                {milestoneReached === 75 && "Almost done! Keep pushing!"}
+              </p>
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={() => setMilestoneReached(null)}
+                  className="px-6 py-3 bg-white text-emerald-900 font-bold rounded-lg hover:bg-emerald-50 transition-colors"
+                >
+                  Keep Learning! →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -746,20 +810,32 @@ export const KitViewerPage: React.FC<KitViewerPageProps> = ({ kitId: propKitId, 
 const LessonContent: React.FC<{ lesson: Lesson }> = ({ lesson }) => {
   if (lesson.type === 'text' && lesson.content) {
     return (
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 shadow-xl" role="article" aria-label="Lesson content">
         <div className="prose prose-invert max-w-none">
           {lesson.content.sections?.map((section: any, index: number) => (
-            <div key={index} className="mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">{section.heading}</h2>
-              <div className="text-slate-300 leading-relaxed whitespace-pre-line">
+            <div key={index} className="mb-10 scroll-mt-20" id={`section-${index}`}>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-5 flex items-center gap-3 border-b border-slate-700 pb-3">
+                <span className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-sm font-bold flex-shrink-0">
+                  {index + 1}
+                </span>
+                {section.heading}
+              </h2>
+              <div className="text-slate-300 text-base md:text-lg leading-relaxed whitespace-pre-line space-y-4">
                 {section.body}
               </div>
             </div>
           ))}
 
           {lesson.content.note && (
-            <div className="mt-6 p-4 bg-emerald-900/20 border border-emerald-500/30 rounded-lg">
-              <p className="text-sm text-emerald-300">{lesson.content.note}</p>
+            <div className="mt-8 p-5 bg-emerald-900/20 border-l-4 border-emerald-500 rounded-r-lg" role="note" aria-label="Important note">
+              <div className="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-400 flex-shrink-0 mt-0.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <p className="text-sm md:text-base text-emerald-300 font-medium">{lesson.content.note}</p>
+              </div>
             </div>
           )}
         </div>

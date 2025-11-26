@@ -161,11 +161,11 @@ export const ProgressMilestoneWidget: React.FC<{ progress: number }> = ({ progre
   const milestone = getMilestoneMessage();
 
   return (
-    <div className="rounded-xl p-5 bg-gradient-to-br from-violet-900/40 to-purple-900/40 border border-violet-500/50">
+    <div className="rounded-xl p-5 bg-gradient-to-br from-emerald-900/40 to-teal-900/40 border border-emerald-500/50">
       <div className="text-3xl mb-2">{milestone.emoji}</div>
       <h3 className="text-sm font-bold text-white mb-1">{milestone.title}</h3>
       <p className="text-xs text-slate-300 mb-2">{milestone.message}</p>
-      <p className="text-xs text-violet-300 font-medium">
+      <p className="text-xs text-emerald-300 font-medium">
         Next: {milestone.nextStep}
       </p>
     </div>
