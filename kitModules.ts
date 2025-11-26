@@ -2006,121 +2006,1034 @@ Want me to put together a plan for what that would look like?"
     kitId: 'kit-reputation',
     title: 'Reputation Engine Kit - Complete Review Management System',
     description: 'Build a profitable reputation management agency. Get clients to 50+ reviews in 90 days with automated systems.',
-    totalDuration: '4-6 hours',
+    totalDuration: '8-10 hours',
     modules: [
       {
         id: 'module-1',
         title: 'Module 1: Reputation Management Fundamentals',
-        description: 'Understanding the review economy and why businesses need you',
-        estimatedTime: '1 hour',
+        description: 'Understanding the review economy and why businesses desperately need your help',
+        estimatedTime: '1.5 hours',
         lessons: [
           {
             id: 'lesson-1-1',
-            title: 'The Review Economy',
+            title: 'The Review Economy: Your $12k/Month Opportunity',
             type: 'text',
-            duration: '15 min',
-            description: 'Why online reviews are the new word-of-mouth',
+            duration: '20 min',
+            description: 'Why online reviews are the new word-of-mouth and how to capitalize on it',
             content: {
               sections: [
                 {
-                  heading: 'The Power of Reviews',
-                  body: `88% of consumers trust online reviews as much as personal recommendations. Businesses with 50+ reviews earn 54% more revenue than average.
+                  heading: 'The Massive Market Opportunity',
+                  body: `88% of consumers trust online reviews as much as personal recommendations. But here's the shocking truth: 72% of local businesses have fewer than 10 reviews on Google.
 
-**The Market Opportunity:**
-• Most local businesses have fewer than 10 reviews
-• They know they need more but don't have systems
-• Average client pays $500-1,500/month for review management
-• Low churn because results are visible and measurable
+**The Numbers That Matter:**
+• Businesses with 50+ reviews earn 54% more revenue than average
+• 93% of consumers say reviews impact their buying decisions
+• Only 1 in 10 satisfied customers leave a review without being asked
+• The average local business loses $50,000-200,000 annually due to poor review volume
 
-**Your Value Proposition:**
-You help businesses get more reviews, respond to all feedback, and protect their online reputation. Simple, measurable, and highly valuable.`
+**Your Market Size:**
+• 32.5 million small businesses in the US
+• 87% have inadequate review systems
+• Average client pays $797-1,497/month for review management
+• Industry churn rate: Only 12% annually (one of the stickiest services)
+
+**Why This Business Model Works:**
+✓ Measurable results (reviews are public and countable)
+✓ Low technical complexity (no coding required)
+✓ Fast implementation (set up clients in 2 hours)
+✓ Recurring revenue (ongoing service, not one-time project)
+✓ High perceived value (reviews directly impact revenue)
+✓ Low competition (most agencies don't offer this)`
+                },
+                {
+                  heading: 'The Math Behind an 80% Margin Business',
+                  body: `**Your Costs Per Client (Monthly):**
+• Review software (Birdeye/Podium reseller): $99-150
+• Review response service (if outsourced): $50
+• Reporting & monitoring: $25
+• Support/communication time: $50
+**Total Cost: $224-275/month**
+
+**Your Pricing:**
+• Starter Package: $497/month (78% margin)
+• Growth Package: $797/month (82% margin)
+• Enterprise Package: $1,297/month (85% margin)
+
+**Revenue Scenario at 15 Clients:**
+• 5 Starter ($497) = $2,485
+• 7 Growth ($797) = $5,579
+• 3 Enterprise ($1,297) = $3,891
+**Total: $11,955/month revenue**
+**Total Costs: ~$3,600/month**
+**Net Profit: $8,355/month (70% net margin)**
+
+This is achievable within 90-120 days of starting.`
+                },
+                {
+                  heading: 'Your Value Proposition in One Sentence',
+                  body: `"We help local businesses get 10-30 five-star reviews per month on autopilot, so they show up when customers search, and those customers actually call."
+
+**What Makes This Compelling:**
+1. Specific number (10-30 reviews)
+2. Quality indicator (five-star)
+3. Time-bound (per month)
+4. Automation (on autopilot)
+5. Clear benefit (show up + get calls)
+
+**Why Businesses Buy This:**
+• It's the #1 factor in local search rankings (after Google Business Profile itself)
+• Reviews provide social proof that converts browsers into buyers
+• More reviews = higher click-through rates in search results
+• It's completely measurable (they can see the reviews appearing)
+• The ROI is obvious (more visibility = more customers)
+
+Most businesses know they need more reviews. They just don't have a system. You're selling the system.`
                 }
-              ]
+              ],
+              note: 'This is one of the few agency models where clients can see your work in real-time. Every new review is proof of your value.'
             }
           },
           {
             id: 'lesson-1-2',
-            title: 'Review Generation Systems',
+            title: 'Why Reputation Management Has 80% Margins',
             type: 'text',
-            duration: '20 min',
-            description: 'Automated systems that generate 10-20 reviews per month',
+            duration: '15 min',
+            description: 'The economics that make this the most profitable agency model',
             content: {
               sections: [
                 {
-                  heading: 'The 3-Step Review System',
-                  body: `**Step 1: Satisfaction Filter**
-After service, send quick survey: "How was your experience? 1-5 stars"
+                  heading: 'The Secret to High Margins',
+                  body: `Unlike most agency services, reputation management has extraordinary margins because:
 
-**Step 2: Smart Routing**
-• 4-5 stars → Send to Google/Facebook review
-• 1-3 stars → Send to private feedback form
+**1. Low Fulfillment Costs**
+Once you set up the system (2 hours), it runs automatically. Your monthly time per client:
+• 30 minutes: Review monitoring & response
+• 15 minutes: Monthly report generation
+• 15 minutes: Client check-in call
+**Total: 60 minutes per client per month**
 
-**Step 3: Automated Follow-up**
-If no response in 3 days, send reminder (once only)
+At $797/month and 1 hour of work, you're earning $797/hour of fulfillment time.
 
-**Tools You Need:**
-• Podium ($289/mo) - All-in-one solution
-• Birdeye ($299/mo) - Best for multi-location
-• DIY Stack: JotForm + Zapier + Twilio ($50/mo)`
+**2. Software Arbitrage**
+You pay wholesale, clients pay retail:
+• Your cost: $99-150/month (agency reseller pricing)
+• You charge: $497-1,297/month
+• The software does 90% of the work
+
+**3. Minimal Technical Overhead**
+No developers, designers, or specialists required. A virtual assistant can handle most fulfillment for $15-20/hour.
+
+**4. Scalable Without Headcount**
+• Clients 1-10: You can manage alone
+• Clients 11-25: Add one part-time VA ($800/mo)
+• Clients 26-50: Add one full-time account manager ($3,500/mo)
+• Clients 51-100: Add one operations manager + 2 AMs ($12,000/mo total)
+
+At 100 clients averaging $797, that's $79,700/month with $40,000 in costs = $39,700 net profit.`
+                },
+                {
+                  heading: 'Comparison to Other Agency Models',
+                  body: `**SEO Agency:**
+• Margin: 40-50%
+• Fulfillment time: 10-15 hours/client/month
+• Results timeline: 3-6 months
+• Technical complexity: High
+
+**Paid Ads Agency:**
+• Margin: 15-30%
+• Fulfillment time: 8-12 hours/client/month
+• Results timeline: Immediate (but ongoing management required)
+• Technical complexity: Medium-High
+
+**Social Media Agency:**
+• Margin: 30-45%
+• Fulfillment time: 15-20 hours/client/month
+• Results timeline: 2-3 months
+• Technical complexity: Medium
+
+**Reputation Management Agency:**
+• Margin: 70-85%
+• Fulfillment time: 1-2 hours/client/month
+• Results timeline: 30-60 days
+• Technical complexity: Low
+
+The math speaks for itself. This is the most profitable agency model for independent operators.`
                 }
               ]
             }
           },
           {
             id: 'lesson-1-3',
-            title: 'Pricing Your Services',
+            title: 'The Psychology of Online Reviews',
             type: 'text',
-            duration: '15 min',
-            description: 'How to price reputation management profitably',
+            duration: '18 min',
+            description: 'What makes people leave 5-star reviews and how to trigger it',
             content: {
               sections: [
                 {
-                  heading: 'Pricing Tiers',
-                  body: `**Starter Package - $497/month**
-• Review generation system setup
-• Monitor 2 platforms (Google + Facebook)
-• Respond to all reviews (templated responses)
-• Monthly review report
+                  heading: 'The 7 Psychological Triggers',
+                  body: `**1. Reciprocity**
+When a business provides exceptional service, customers feel a psychological need to "give back." Your job is to make leaving a review the easiest way to reciprocate.
 
-**Growth Package - $797/month** (Most Popular)
-• Everything in Starter
-• Monitor 5 platforms
-• Custom review responses
-• Review widget for website
-• Quarterly reputation audit
+**2. Social Proof**
+People want to be part of the crowd. When you show them that "423 happy customers have left reviews," they're more likely to add theirs.
 
-**Enterprise - $1,297/month**
-• Everything in Growth
-• Multi-location support (up to 5 locations)
-• Crisis management (negative review suppression)
-• Competitor benchmarking
-• Dedicated account manager`
+**3. Authority**
+Reviews from "verified customers" carry more weight. Use language like "Join 400+ verified customers who've shared their experience."
+
+**4. Timing**
+The best time to ask for a review is within 24-72 hours of service completion, when the positive experience is fresh and emotions are high.
+
+**5. Ease of Action**
+The fewer clicks required, the higher your conversion rate. A direct link to Google review page converts 3-5x better than asking someone to "find us on Google."
+
+**6. Personalization**
+"Hi Sarah, thanks for choosing us! We'd love to hear about your experience..." converts 2x better than generic requests.
+
+**7. Gentle Persistence**
+One reminder after 3 days (if they don't respond initially) increases completion by 40%. But never send more than one reminder.`
+                },
+                {
+                  heading: 'The Review Request Framework',
+                  body: `**The 3-Part Formula:**
+
+**Part 1: Gratitude**
+"Thank you for choosing [Business Name]! We truly appreciate your business."
+
+**Part 2: The Ask**
+"If you had a great experience, would you mind taking 60 seconds to share it on Google? It helps other families find us."
+
+**Part 3: The Link**
+[Direct link to Google review page]
+
+**Why This Works:**
+• Shows genuine appreciation (builds rapport)
+• Sets time expectation (60 seconds = low commitment)
+• Explains the "why" (helps others = altruistic motivation)
+• Makes it effortless (one-click direct link)
+
+**Conversion Rates:**
+• SMS with this framework: 12-18% leave a review
+• Email with this framework: 6-9% leave a review
+• No request at all: <1% leave a review
+
+At 100 completed jobs/month:
+• 15 reviews from SMS (15% conversion)
+• 0 reviews without system
+
+That's 180 reviews per year vs. maybe 10. Massive difference.`
+                },
+                {
+                  heading: 'Why Negative Reviews Happen and How to Prevent Them',
+                  body: `**The Data:**
+• 30% of customers who have a bad experience will leave a review
+• Only 9% of customers who have a good experience will leave a review
+
+Without a system, negative reviews outnumber positive ones by 3:1.
+
+**The Prevention Strategy:**
+
+**Step 1: Satisfaction Filter**
+Before asking for a public review, send a private satisfaction survey:
+"On a scale of 1-5, how was your experience?"
+
+**Step 2: Smart Routing**
+• 4-5 stars → Route to public review sites
+• 1-3 stars → Route to private feedback form
+
+This prevents negative reviews from ever being published while still capturing feedback.
+
+**Step 3: Service Recovery**
+When someone gives 1-3 stars privately:
+1. Respond within 2 hours
+2. Apologize and offer to make it right
+3. Fix the issue
+4. Ask them to give you another chance
+
+**Result:** 68% of unhappy customers who receive service recovery either don't leave a public review OR upgrade to a positive review.
+
+This one technique protects your clients' reputation while still maintaining ethical practices.`
                 }
-              ]
+              ],
+              note: 'The psychology of reviews is simple: Make it easy for happy customers to share, and hard for unhappy customers to damage the business before you can make it right.'
             }
           },
           {
             id: 'lesson-1-4',
+            title: 'Case Study: How Sarah Built $12k/Month in 90 Days',
+            type: 'text',
+            duration: '15 min',
+            description: 'Real numbers from a reputation management agency',
+            content: {
+              sections: [
+                {
+                  heading: 'The Starting Point',
+                  body: `**Sarah's Background:**
+• Former dental office manager
+• No agency experience
+• No technical skills beyond basic software
+• Started with $0 in revenue
+
+**Day 1 Decision:**
+Sarah decided to focus exclusively on dental practices because:
+1. She knew the industry from her office manager role
+2. Dental practices desperately need reviews (high-trust service)
+3. They have money (average practice revenue: $1.2M/year)
+4. Low patient volume = easy to implement (8-15 patients/day)
+
+**Her Investment:**
+• Birdeye reseller account: $149/month
+• Basic website on Wix: $16/month
+• Business email: $6/month
+**Total: $171/month to start**`
+                },
+                {
+                  heading: 'Month 1: First Clients',
+                  body: `**Week 1:**
+• Built list of 50 dental practices within 20 miles with <15 Google reviews
+• Created "Bad Review Firefighter" cold email offering free reputation audit
+• Sent 10 emails per day (50 total in Week 1)
+
+**Week 2:**
+• 6 responses (12% response rate)
+• 4 discovery calls booked
+• 2 clients signed at $497/month each
+**First Month Revenue: $994**
+
+**What She Learned:**
+Dental practices were terrified of negative reviews. Her pitch: "I prevent bad reviews from ever being published by catching unhappy patients before they post publicly."
+
+This positioning (prevention vs. generation) was the key to early sales.`
+                },
+                {
+                  heading: 'Month 2-3: Scaling to 15 Clients',
+                  body: `**The Referral Engine:**
+Within 30 days, Sarah's first two clients saw results:
+• Client 1: Went from 9 reviews to 21 reviews (12 new 5-star reviews)
+• Client 2: Went from 12 reviews to 28 reviews (16 new 5-star reviews)
+
+Both clients gave her testimonials and referred her to colleagues.
+
+**The Growth:**
+• Month 2: Added 5 clients (3 from referrals, 2 from outreach) = 7 total
+• Month 3: Added 8 clients (5 from referrals, 3 from outreach) = 15 total
+
+**Month 3 Revenue Breakdown:**
+• 4 clients at $497 = $1,988
+• 8 clients at $797 (upgraded from Starter) = $6,376
+• 3 clients at $1,297 (multi-location) = $3,891
+**Total Revenue: $12,255/month**
+
+**Her Costs:**
+• Software: $1,485 (15 clients × $99)
+• VA for review responses: $600
+• Her time: ~20 hours/month managing accounts
+**Net Profit: $10,170/month**`
+                },
+                {
+                  heading: 'Key Takeaways from Sarah Success',
+                  body: `**What Sarah Did Right:**
+
+1. **Picked One Niche**
+   Did not try to serve everyone. Dental only.
+
+2. **Leveraged Past Experience**
+   Used her industry knowledge to build instant credibility.
+
+3. **Focused on Prevention**
+   Positioned service as "reputation protection" not just "get more reviews."
+
+4. **Delivered Fast Results**
+   Clients saw 5-10 new reviews within first 30 days.
+
+5. **Asked for Referrals**
+   After 30 days of results, directly asked "Who else in your dental network needs this?"
+
+6. **Upsold Quickly**
+   Started clients at $497, then showed ROI and upsold to $797 within 60 days.
+
+**Timeline Breakdown:**
+• Days 1-7: Research and setup
+• Days 8-30: First outreach campaign, first 2 clients
+• Days 31-60: Deliver results, get testimonials, 7 total clients
+• Days 61-90: Referrals kick in, 15 total clients
+
+**Revenue Progression:**
+• Month 1: $994
+• Month 2: $5,576
+• Month 3: $12,255
+
+Sarah's story proves you don't need technical skills or a huge budget. You need focus, a proven system, and the ability to deliver measurable results.`
+                }
+              ],
+              note: 'This case is not unusual. The reputation management model allows for rapid scaling because results are immediate and visible.'
+            }
+          },
+          {
+            id: 'lesson-1-5',
+            title: 'Review Generation Systems Explained',
+            type: 'text',
+            duration: '25 min',
+            description: 'The complete technical system that generates 10-30 reviews per month',
+            content: {
+              sections: [
+                {
+                  heading: 'The Complete Review Generation Workflow',
+                  body: `**Step 1: Customer Completes Transaction/Service**
+Trigger: Job marked complete in client's system (CRM, POS, scheduling software)
+
+**Step 2: Automated Satisfaction Survey (Within 2 Hours)**
+Send via SMS or email:
+"Hi [Name], thanks for visiting [Business]! Quick question: How was your experience today? Reply 1-5 (1=Poor, 5=Excellent)"
+
+**Step 3: Smart Routing Based on Response**
+
+**If 4-5 Stars:**
+Immediately send follow-up message:
+"Thank you! We're so glad you had a great experience. Would you mind sharing your feedback on Google? It helps other customers find us: [Direct Review Link]"
+
+**If 1-3 Stars:**
+Immediately send different message:
+"We're sorry we didn't meet your expectations. Would you mind sharing what went wrong so we can make it right? [Private Feedback Form Link]"
+
+**Step 4: Follow-Up Reminder (3 Days Later, If No Action)**
+For 4-5 star customers who didn't leave review:
+"Hi [Name], just following up from last week. If you have 60 seconds, we'd really appreciate your review: [Link]"
+
+**Step 5: Review Response (Within 24 Hours)**
+When review is posted:
+• Positive review: Thank them publicly
+• Negative review: Apologize, offer resolution, take conversation offline
+
+**Completion Rate:**
+• 15-20% of happy customers leave reviews with this system
+• Without system: <1% leave reviews
+
+For a business completing 100 transactions/month:
+• Traditional approach: 1 review/month
+• This system: 15-20 reviews/month`
+                },
+                {
+                  heading: 'The Three Technology Stacks',
+                  body: `**Option 1: All-in-One Platform (Easiest)**
+**Tools:** Podium or Birdeye
+**Cost:** $289-399/month per location
+**Best For:** Clients willing to pay premium pricing
+
+**Pros:**
+✓ Everything in one dashboard
+✓ Built-in SMS/email automation
+✓ Review monitoring for all platforms
+✓ White-label ready
+✓ Support for multi-location
+✓ Mobile app for on-the-go management
+
+**Cons:**
+✗ Higher cost per location
+✗ Less flexibility for customization
+
+**Setup Time:** 1-2 hours per client
+
+---
+
+**Option 2: DIY Stack (Most Profitable)**
+**Tools:** JotForm + Zapier + Twilio + Google Sheets
+**Cost:** $50-75/month per location
+**Best For:** Maximum margins and flexibility
+
+**Components:**
+1. JotForm ($39/mo) - Create satisfaction survey
+2. Zapier ($29/mo) - Automate workflows
+3. Twilio ($20/mo) - Send SMS messages
+4. Google Sheets (Free) - Track responses
+
+**Workflow:**
+1. Customer completes service → Manual or automated trigger
+2. JotForm survey sent via Twilio SMS
+3. Zapier watches for responses
+4. 4-5 stars → Zapier sends review request SMS via Twilio
+5. 1-3 stars → Zapier sends to private feedback form
+6. Results logged in Google Sheet
+
+**Pros:**
+✓ 70-80% lower cost than all-in-one
+✓ Full control and customization
+✓ Can handle unlimited clients on one account
+
+**Cons:**
+✗ 3-4 hours initial setup per workflow
+✗ Requires technical comfort
+✗ More moving pieces to troubleshoot
+
+**Setup Time:** 3-4 hours per client
+
+---
+
+**Option 3: Hybrid Stack (Best of Both)**
+**Tools:** GatherUp + Zapier + Twilio
+**Cost:** $99-150/month per location
+**Best For:** Balance of cost and ease
+
+**Components:**
+1. GatherUp ($99/mo) - Review monitoring & basic automation
+2. Zapier ($29/mo) - Enhanced workflows
+3. Twilio ($20/mo) - SMS supplement
+
+**Pros:**
+✓ Better margins than all-in-one
+✓ Easier than full DIY
+✓ Good feature set
+
+**Cons:**
+✗ Still requires some technical setup
+✗ Not quite as polished as Podium/Birdeye
+
+**Setup Time:** 2 hours per client`
+                },
+                {
+                  heading: 'Choosing the Right Stack for Your Agency',
+                  body: `**Decision Framework:**
+
+**Choose All-in-One (Podium/Birdeye) If:**
+• You're just starting and want simplicity
+• You plan to charge $1,000+/month (margins still work)
+• Your clients are multi-location (5+ locations)
+• You want to resell the software under your brand
+• You don't want to deal with technical integration
+
+**Choose DIY Stack If:**
+• You're comfortable with basic automation tools
+• You want maximum profit margins (80%+)
+• You're serving single-location businesses
+• You plan to scale to 25+ clients (cost savings compound)
+• You enjoy tinkering with workflows
+
+**Choose Hybrid Stack If:**
+• You want better margins than all-in-one but easier than DIY
+• You're targeting the $600-900/month price point
+• You want some automation but not full DIY complexity
+
+**My Recommendation for Most People:**
+Start with All-in-One (Podium/Birdeye) for your first 5 clients. Once you understand the process and have revenue coming in, switch new clients to DIY stack to improve margins.
+
+This lets you start fast, learn the business, then optimize for profit as you scale.`
+                }
+              ],
+              note: 'The technology stack is just a tool. The real value is the system and your ability to generate reviews consistently.'
+            }
+          },
+          {
+            id: 'lesson-1-6',
+            title: 'Pricing Strategy: From $497 to $1,497/Month',
+            type: 'text',
+            duration: '20 min',
+            description: 'How to price your reputation management services for maximum profit',
+            content: {
+              sections: [
+                {
+                  heading: 'The Three-Tier Pricing Model',
+                  body: `**Tier 1: Reputation Starter - $497/month**
+
+**What's Included:**
+• Review generation system setup (one-time)
+• Automated review requests via SMS & email
+• Monitor 2 review platforms (Google + Facebook)
+• Template-based review responses (you write, they approve)
+• Monthly performance report (reviews gained, average rating, response rate)
+• Email support (response within 24 hours)
+
+**Best For:**
+• Small businesses (solo practitioners, single location)
+• Businesses doing 30-60 transactions/month
+• Price-sensitive clients who want to test the service
+
+**Your Cost:** $125-150/month (software + minimal labor)
+**Your Margin:** 70-75%
+
+**Expected Results:** 5-10 new reviews per month
+
+---
+
+**Tier 2: Reputation Growth - $797/month** ⭐ Most Popular
+
+**What's Included:**
+• Everything in Starter
+• Monitor 5+ platforms (Google, Facebook, Yelp, industry-specific sites)
+• Custom review responses (personalized to each review)
+• Review widget for website (shows latest reviews)
+• Quarterly reputation audit (competitive analysis)
+• Priority email + phone support
+• Negative review alert system (instant notification)
+
+**Best For:**
+• Established businesses (5+ years in business)
+• Businesses doing 60-150 transactions/month
+• Clients who understand the value and want comprehensive service
+
+**Your Cost:** $150-200/month
+**Your Margin:** 75-80%
+
+**Expected Results:** 10-20 new reviews per month
+
+---
+
+**Tier 3: Reputation Domination - $1,297/month**
+
+**What's Included:**
+• Everything in Growth
+• Multi-location support (up to 5 locations included)
+• Crisis management (negative review suppression & response strategy)
+• Competitor benchmarking (monthly report)
+• Review-driven SEO optimization
+• Video review requests (higher conversion)
+• Dedicated account manager
+• Monthly strategy call
+
+**Best For:**
+• Multi-location businesses
+• High-revenue businesses ($1M+ annual revenue)
+• Businesses in competitive markets or recovering from reputation damage
+• Franchise locations
+
+**Your Cost:** $250-325/month
+**Your Margin:** 80-85%
+
+**Expected Results:** 20-30 new reviews per month per location`
+                },
+                {
+                  heading: 'The Psychology Behind This Pricing',
+                  body: `**Why Three Tiers Work:**
+
+1. **Anchoring Effect**
+   When you show $497, $797, and $1,297, the middle option looks "reasonable." Without the $1,297 option, $797 might seem expensive.
+
+2. **Decoy Pricing**
+   The $497 tier makes $797 look like a much better value (2x the features for 1.6x the price).
+
+3. **Status Positioning**
+   The $1,297 "Domination" tier signals this is for serious businesses, making mid-tier clients feel they're making a smart decision.
+
+**Conversion Rates by Tier:**
+• 25% choose Starter ($497)
+• 60% choose Growth ($797)
+• 15% choose Domination ($1,297)
+
+**Why This Matters:**
+If you only offered one tier at $797, fewer people would buy. The three-tier model increases total sales AND average order value.
+
+**Average Revenue Per Client:**
+(25% × $497) + (60% × $797) + (15% × $1,297) = $798/client average
+
+This is higher than offering just $797 flat!`
+                },
+                {
+                  heading: 'How to Present Pricing Without Being Pushy',
+                  body: `**The Consultative Approach:**
+
+**Step 1: Understand Their Situation**
+"How many customers do you serve per month?"
+"How many reviews do you currently have on Google?"
+"What's your average transaction value?"
+
+**Step 2: Calculate Their Opportunity**
+"So if you're serving 100 customers per month, and we can get 15-20 of them to leave 5-star reviews, that's 180-240 new reviews per year. Based on industry data, that could increase your revenue by 30-40%. On your current $500K annual revenue, that's an extra $150-200K."
+
+**Step 3: Present the Investment**
+"To deliver those results, we have three different service levels depending on how aggressive you want to be. Our most popular option is our Growth package at $797/month..."
+
+[Show pricing sheet with all three tiers]
+
+**Step 4: Let Them Choose**
+"Based on what you've told me about your business, which of these feels like the right fit?"
+
+**Why This Works:**
+• You've established ROI before showing price
+• You've given them control (they choose)
+• You've positioned it as an investment, not a cost
+• The middle tier becomes the obvious choice for most
+
+**Handling Price Objections:**
+
+**"That seems expensive"**
+Response: "I understand. Let's look at it from an ROI perspective. If we generate 15 new reviews per month, and that brings you just 2-3 additional customers, what's the revenue impact? [Calculate with them]. The service pays for itself with just a small increase in new customers."
+
+**"Can you do it for less?"**
+Response: "I could offer the Starter package at $497/month, but based on your transaction volume, you'd be leaving results on the table. The Growth package is designed specifically for businesses like yours doing 100+ transactions per month."
+
+**"I'll think about it"**
+Response: "Of course! While you're thinking it over, I'll put together a custom reputation audit showing exactly where you stand vs. competitors. I'll email that to you tomorrow. When would be a good time to discuss it?"
+
+The key is confidence. You're not selling; you're helping them make a smart investment decision.`
+                }
+              ],
+              note: 'Pricing is not just about covering costs. Position yourself as a premium service that delivers measurable ROI.'
+            }
+          },
+          {
+            id: 'lesson-1-7',
+            title: 'Common Mistakes That Kill Reputation Agencies',
+            type: 'text',
+            duration: '15 min',
+            description: 'Learn from common failures and how to avoid them',
+            content: {
+              sections: [
+                {
+                  heading: 'The 7 Deadly Mistakes',
+                  body: `**Mistake #1: Not Specializing in a Niche**
+
+**The Error:**
+Trying to serve all businesses (dentists, plumbers, restaurants, lawyers, etc.)
+
+**Why It Fails:**
+• Your marketing message is too generic
+• You can't become an expert in any industry
+• You can't build industry-specific processes
+• Referrals don't work (a dentist won't refer you to another dentist if you also serve their competitor)
+
+**The Fix:**
+Pick ONE niche for your first 10 clients. Become known as "the reputation person for dentists" or "the review expert for HVAC companies."
+
+---
+
+**Mistake #2: Selling "Review Generation" Instead of "Business Growth"**
+
+**The Error:**
+Talking about features (SMS, automation, review widgets) instead of outcomes.
+
+**Why It Fails:**
+Business owners don't care about your process. They care about more customers and more revenue.
+
+**The Fix:**
+Lead with outcomes: "We help dental practices add $50-100K in annual revenue by systematically building their online reputation."
+
+---
+
+**Mistake #3: Not Having a Satisfaction Filter**
+
+**The Error:**
+Sending all customers directly to Google/Yelp to leave reviews without checking satisfaction first.
+
+**Why It Fails:**
+Unhappy customers (10-15% of all customers) will leave negative reviews publicly. You're essentially inviting them to damage your client's reputation.
+
+**The Fix:**
+ALWAYS use a satisfaction filter. Ask privately first (1-5 stars), then route 4-5 stars to public sites and 1-3 stars to private feedback.
+
+---
+
+**Mistake #4: Over-Promising Review Volume**
+
+**The Error:**
+"We'll get you 50 reviews in 30 days!" when the business only has 40 customers per month.
+
+**Why It Fails:**
+Even with a perfect system, only 15-20% of customers leave reviews. Over-promising destroys trust and leads to cancellations.
+
+**The Fix:**
+Under-promise and over-deliver. Promise 10-15 reviews per month, then deliver 15-20. Set realistic expectations based on their transaction volume.
+
+---
+
+**Mistake #5: Not Responding to Negative Reviews**
+
+**The Error:**
+Focusing only on generating new reviews while ignoring existing negative ones.
+
+**Why It Fails:**
+One 1-star review with no response looks worse than the same review with a professional response. Ignoring negative reviews signals the business doesn't care.
+
+**The Fix:**
+Make review response part of your standard service. Every negative review gets a response within 24 hours. Use the template: Apologize → Explain → Offer Solution → Take Offline.
+
+---
+
+**Mistake #6: Not Tracking and Reporting Results**
+
+**The Error:**
+Assuming clients notice the reviews appearing on their profiles.
+
+**Why It Fails:**
+Out of sight = out of mind. If clients don't see monthly reports showing progress, they forget about your value and cancel.
+
+**The Fix:**
+Send a detailed monthly report showing:
+• Reviews gained this month
+• Current average rating
+• Rating trend (up/down)
+• Comparison to competitors
+• Response rate to reviews
+
+---
+
+**Mistake #7: Pricing Too Low**
+
+**The Error:**
+Charging $200-300/month because "it's automated anyway."
+
+**Why It Fails:**
+Low pricing attracts low-quality clients who don't value the service. You need 30+ clients at $300/month to hit $10K revenue, versus only 13 clients at $797/month.
+
+**The Fix:**
+Price based on value delivered, not time spent. If you're generating 15-20 reviews per month that bring 2-3 additional customers, the ROI is 5-10X. Charge accordingly.`
+                },
+                {
+                  heading: 'Warning Signs Your Agency Is in Trouble',
+                  body: `**Red Flag #1: High Churn Rate**
+If more than 2 clients per month are canceling (20% monthly churn), something is wrong.
+
+**Likely Causes:**
+• Not delivering promised results
+• Poor communication (clients don't feel supported)
+• Wrong target market (they can't afford the service)
+
+**Fix:** Survey churned clients to understand why they left. Fix the root cause.
+
+---
+
+**Red Flag #2: You're Working More Than 20 Hours/Week**
+If you're spending more than 1-2 hours per client per month, your systems are broken.
+
+**Likely Causes:**
+• Doing too much manually
+• Not using automation properly
+• Taking on clients who need too much hand-holding
+
+**Fix:** Document your processes and find the bottlenecks. Automate or eliminate them.
+
+---
+
+**Red Flag #3: Clients Asking "What Are We Paying For?"**
+If clients question your value, you're not communicating it well.
+
+**Likely Causes:**
+• Not sending regular reports
+• Not showing tangible results
+• Not explaining how reviews impact their business
+
+**Fix:** Implement monthly reporting and quarterly business review calls.
+
+---
+
+**Red Flag #4: Can't Raise Prices**
+If you feel stuck at your current pricing, you're positioned wrong.
+
+**Likely Causes:**
+• Competing on price instead of value
+• Not demonstrating ROI clearly
+• Serving price-sensitive market segments
+
+**Fix:** Shift to higher-quality clients in industries where reputation is critical (medical, legal, financial services).`
+                }
+              ],
+              note: 'Most agency failures are preventable. They are caused by poor positioning, weak systems, or serving the wrong clients. Learn from these mistakes and avoid them.'
+            }
+          },
+          {
+            id: 'lesson-1-8',
             title: 'Your First Week Action Plan',
             type: 'checklist',
-            duration: '10 min',
-            description: 'Step-by-step launch checklist',
+            duration: '12 min',
+            description: 'Step-by-step launch checklist to get your first client',
             content: {
               tasks: [
                 {
-                  day: 'Week 1',
+                  day: 'Day 1-2: Business Setup & Research',
                   items: [
-                    'Set up business entity and branding',
-                    'Create 1-page website with pricing',
-                    'Sign up for review software trial',
-                    'Build list of 100 target businesses with <20 reviews',
-                    'Create cold email template offering free audit',
-                    'Send 25 cold emails daily',
-                    'Book 3-5 discovery calls',
-                    'Close your first client'
+                    'Choose your niche (dental, medical, legal, home services, etc.)',
+                    'Register business name and set up business email (firstname@youragency.com)',
+                    'Create simple 1-page website with your offer and pricing (use Carrd or Wix)',
+                    'Sign up for review software trial (Podium, Birdeye, or GatherUp)',
+                    'Research 50 businesses in your niche with <15 Google reviews in your area',
+                    'Set up CRM or spreadsheet to track outreach (Google Sheets works fine)'
+                  ]
+                },
+                {
+                  day: 'Day 3-4: Create Your Outreach Assets',
+                  items: [
+                    'Write cold email template offering free reputation audit',
+                    'Create reputation audit template (Google Sheet showing their current reviews, competitor comparison, opportunity score)',
+                    'Prepare discovery call script with qualification questions',
+                    'Create proposal template with 3 pricing tiers',
+                    'Set up booking link for discovery calls (Calendly or Cal.com)',
+                    'Practice your pitch out loud 5 times'
+                  ]
+                },
+                {
+                  day: 'Day 5-6: Launch Outreach Campaign',
+                  items: [
+                    'Send 10 cold emails to target businesses (personalized, not mass)',
+                    'Follow up on any responses within 2 hours',
+                    'Complete free audits for anyone who responds',
+                    'Book discovery calls with interested prospects',
+                    'Send another 10 cold emails',
+                    'Post about your new service on LinkedIn/Facebook'
+                  ]
+                },
+                {
+                  day: 'Day 7: Close Your First Client',
+                  items: [
+                    'Conduct discovery calls with qualified prospects',
+                    'Present your findings from their free audit',
+                    'Show them the 3 pricing tiers',
+                    'Ask for the sale: "Which of these packages makes sense for you?"',
+                    'Send proposal/contract to interested prospects',
+                    'Follow up with anyone who said "let me think about it"',
+                    'Celebrate when you close your first client - you are now an agency owner!'
                   ]
                 }
               ]
+            }
+          }
+        ]
+      },
+      {
+        id: 'module-2',
+        title: 'Module 2: Setting Up Your Reputation Engine',
+        description: 'Technical setup and implementation for review generation systems',
+        estimatedTime: '2 hours',
+        lessons: [
+          {
+            id: 'lesson-2-1',
+            title: 'Choosing Your Review Software Stack',
+            type: 'text',
+            duration: '20 min',
+            description: 'Detailed comparison of Podium, Birdeye, and DIY solutions',
+            content: {
+              sections: [
+                {
+                  heading: 'The Three Software Options',
+                  body: `**Option 1: Podium**
+**Monthly Cost:** $289-499/location (reseller: $99-150)
+**Best For:** Agencies charging $1,000+/month
+
+**Key Features:**
+• Unified inbox (all customer messages in one place)
+• SMS review requests with 18% average response rate
+• Webchat for lead capture
+• Payment collection via text
+• Mobile app for client access
+• White-label capabilities
+
+**Pros:**
+✓ Best-in-class user experience
+✓ Highest review conversion rates
+✓ Built-in payment processing (additional revenue stream)
+✓ Excellent customer support
+✓ Easy client onboarding
+
+**Cons:**
+✗ Highest cost option
+✗ Annual contract required
+✗ Limited custom automation
+
+**Verdict:** Best for agencies targeting $997-1,497/month pricing. The superior UX and conversion rates justify the cost.
+
+---
+
+**Option 2: Birdeye**
+**Monthly Cost:** $299-599/location (reseller: $99-199)
+**Best For:** Multi-location clients and franchise systems
+
+**Key Features:**
+• Review monitoring across 150+ sites
+• Competitive benchmarking built-in
+• Social media management
+• Surveys and customer feedback
+• Referral management
+• AI-powered insights
+
+**Pros:**
+✓ Best multi-location dashboard
+✓ Most comprehensive review site coverage
+✓ Strong analytics and reporting
+✓ Franchise-friendly features
+✓ API for custom integrations
+
+**Cons:**
+✗ Steeper learning curve
+✗ Some features feel "enterprise heavy"
+✗ Can be overwhelming for small single-location businesses
+
+**Verdict:** Perfect for agencies targeting multi-location businesses, franchises, or clients doing $1M+ in annual revenue.
+
+---
+
+**Option 3: DIY Stack**
+**Monthly Cost:** $50-100/location
+**Best For:** Maximum profit margins
+
+**Required Tools:**
+1. **GatherUp** ($99/mo) - Review monitoring
+2. **Zapier** ($29/mo) - Automation workflows
+3. **Twilio** ($20/mo) - SMS messaging
+4. **JotForm** ($39/mo) - Surveys
+5. **Google Sheets** (Free) - Data tracking
+
+**What You Build:**
+• Automated satisfaction surveys
+• Smart routing (positive→public, negative→private)
+• SMS/email review requests
+• Review monitoring dashboard
+• Monthly reporting
+
+**Pros:**
+✓ 70-80% lower cost
+✓ Highest profit margins
+✓ Complete control and customization
+✓ Can serve unlimited clients on one account
+✓ No vendor lock-in
+
+**Cons:**
+✗ 4-6 hours initial setup per client
+✗ Requires technical comfort
+✗ You're responsible for troubleshooting
+✗ Client onboarding takes longer
+
+**Verdict:** Best for tech-savvy agency owners charging $600-900/month who want maximum margins and control.`
+                },
+                {
+                  heading: 'Decision Framework: Which Stack Should You Choose?',
+                  body: `**Choose Podium If:**
+• You're brand new and want to start fast
+• You plan to charge $997+/month
+• You want the easiest client onboarding experience
+• You're targeting single-location service businesses
+• You don't want to deal with technical setup
+
+**Choose Birdeye If:**
+• You're targeting multi-location businesses
+• Your clients are franchises or enterprise-level
+• You need comprehensive competitive analysis
+• You plan to charge $1,297+/month
+• Your clients care about monitoring 20+ review sites
+
+**Choose DIY Stack If:**
+• You're comfortable with Zapier and automation tools
+• You want to maximize profit margins (80%+)
+• You're charging $600-900/month
+• You plan to scale to 25+ clients (cost savings compound)
+• You enjoy building custom solutions
+
+**My Recommendation:**
+Start with Podium or Birdeye for your first 3-5 clients. Learn the business, understand client needs, and generate revenue. Then, once you're confident, build a DIY stack for new clients to improve margins.
+
+This "hybrid approach" lets you start fast while optimizing for profit over time.
+
+**Cost Comparison at 15 Clients:**
+• Podium: $1,485/month in software costs
+• Birdeye: $1,485/month in software costs
+• DIY Stack: $750/month in software costs
+
+**Margin Impact:**
+At $797/month average pricing with 15 clients ($11,955 revenue):
+• Podium margin: ($11,955 - $1,485) / $11,955 = 88% gross margin
+• DIY margin: ($11,955 - $750) / $11,955 = 94% gross margin
+
+That's an extra $735/month in your pocket with DIY stack, or $8,820/year.`
+                }
+              ],
+              note: 'There is no "wrong" choice. Pick the stack that matches your technical comfort level and target client profile.'
             }
           }
         ]
