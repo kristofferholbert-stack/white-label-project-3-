@@ -3671,6 +3671,1073 @@ Create spreadsheet with:
               ],
               note: 'The Bad Review Firefighter approach works because it leads with a problem they have RIGHT NOW, not a future benefit.'
             }
+          },
+          {
+            id: 'lesson-3-2',
+            title: 'The Free Reputation Audit That Sells Itself',
+            type: 'text',
+            duration: '20 min',
+            description: 'Create audits that demonstrate value and make the sale obvious',
+            content: {
+              sections: [
+                {
+                  heading: 'Why Free Audits Convert at 40%',
+                  body: `Offering a free reputation audit accomplishes three things:
+1. Gets prospects to respond (easier than asking for a call directly)
+2. Forces you to research them (shows you care)
+3. Provides tangible value before asking for money
+
+**Conversion Rate:**
+• Cold email asking for call: 2-4% book
+• Cold email offering free audit: 12-18% respond, 40% of those become clients
+
+**The Psychology:**
+When you show someone specific problems with their reputation and quantify the cost, they cannot unsee it. The sale becomes obvious.`
+                },
+                {
+                  heading: 'Building Your Audit Template',
+                  body: `**Create Google Sheet Template:**
+
+**Section 1: Business Overview**
+• Business Name
+• Industry
+• Location
+• Website
+• Current Review Count (Google, Facebook, Yelp)
+• Current Average Rating
+
+**Section 2: Reputation Score (1-100)**
+Calculate score based on:
+• Review count (0-40 points)
+  - <10 reviews = 10 points
+  - 10-25 reviews = 20 points
+  - 25-50 reviews = 30 points
+  - 50+ reviews = 40 points
+• Average rating (0-30 points)
+  - <4.0 = 10 points
+  - 4.0-4.3 = 20 points
+  - 4.4+ = 30 points
+• Review velocity (0-15 points)
+  - <1/month = 5 points
+  - 1-3/month = 10 points
+  - 3+/month = 15 points
+• Response rate (0-15 points)
+  - <25% = 5 points
+  - 25-75% = 10 points
+  - 75%+ = 15 points
+
+**Section 3: Competitor Analysis**
+Table with 3 competitors showing:
+• Business Name
+• Review Count
+• Average Rating
+• Latest Review Date
+• Response Rate
+
+**Section 4: Opportunity Calculation**
+"Based on industry data, businesses with 50+ reviews earn 54% more revenue than average. Your current revenue estimate: $X. Potential with improved reputation: $Y. Opportunity: $Z."
+
+**Section 5: Specific Issues Found**
+• Negative reviews without responses (list them)
+• Low review velocity (last review was X days ago)
+• Competitor advantages (Competitor A has 3x more reviews)
+
+**Section 6: Recommended Action Plan**
+• Goal: Reach 50+ reviews in 90 days
+• Strategy: Automated review generation system
+• Expected: 15-20 new reviews per month
+• Investment: [Your pricing]
+
+Make it visual with color coding (red=problems, yellow=opportunity, green=strengths).`
+                },
+                {
+                  heading: 'Presenting the Audit on Discovery Calls',
+                  body: `**Walk Through Structure (15 minutes):**
+
+**Minutes 1-2: Overview**
+"I put together this audit showing where [Business] stands compared to competitors in [City]. Can you see my screen?"
+
+**Minutes 3-5: The Bad News**
+"Here is what I found: You have only [X] reviews while your main competitor has [Y]. This means when people search for [service], they are more likely to trust them."
+
+**Minutes 6-8: The Cost**
+"Let me show you what this is costing you. Based on search volume and conversion data, that reputation gap is likely costing you 5-10 customers per month. At your average transaction value of $[X], that is $[Y] in lost revenue annually."
+
+**Minutes 9-12: The Solution**
+"The good news: This is completely fixable. Here is what we do..." [Explain system]
+
+**Minutes 13-15: Next Steps**
+"Based on what I am seeing, I would recommend our [Growth Package] at $797/month. This would get you to 50+ reviews in 90 days. Does that make sense for your business?"
+
+**Key Phrases:**
+• "As you can see..." (makes audit visual and obvious)
+• "This is costing you..." (quantifies pain)
+• "The good news..." (positions you as solution)
+• "Does that make sense?" (soft close)
+
+The audit does most of the selling for you.`
+                }
+              ],
+              note: 'A well-researched audit is worth more than any sales pitch. The data speaks for itself.'
+            }
+          },
+          {
+            id: 'lesson-3-3',
+            title: 'Discovery Call Script',
+            type: 'text',
+            duration: '25 min',
+            description: 'Complete call structure from introduction to close',
+            content: {
+              sections: [
+                {
+                  heading: 'The 5-Part Call Framework',
+                  body: `**Part 1: Introduction (2 minutes)**
+Build rapport and set agenda
+
+"Hi [Name], thanks for taking the time. I have about 15-20 minutes blocked out. My plan is to learn about your business, share what I found in your reputation audit, and if it makes sense, discuss how we might work together. Sound good?"
+
+**Part 2: Discovery Questions (5 minutes)**
+Understand their situation and pain points
+
+**Part 3: Present Audit (8 minutes)**
+Show findings and quantify opportunity
+
+**Part 4: Present Solution (3 minutes)**
+Explain your service and pricing
+
+**Part 5: Close (2 minutes)**
+Ask for the sale or next steps
+
+Total: 20 minutes (leave buffer for questions)`
+                },
+                {
+                  heading: 'The 15 Discovery Questions',
+                  body: `Ask these to qualify and understand their needs:
+
+**Business Understanding:**
+1. "Tell me about your business - how long have you been operating?"
+2. "What is your average customer worth to you?"
+3. "How many new customers do you need per month to hit your goals?"
+
+**Current Situation:**
+4. "Are you currently doing anything to generate reviews?"
+5. "What has been your experience with online reviews so far?"
+6. "Have you dealt with negative reviews before?"
+
+**Pain Points:**
+7. "What made you interested in talking today?"
+8. "How important is your online reputation to getting new customers?"
+9. "What happens if nothing changes with your current review situation?"
+
+**Decision Process:**
+10. "Who else is involved in making marketing decisions?"
+11. "What is your timeline for addressing this?"
+12. "Have you worked with reputation management companies before?"
+
+**Budget:**
+13. "What is your monthly marketing budget?"
+14. "How much are you spending to acquire each customer currently?"
+15. "If we could generate 15-20 reviews per month, what would that be worth to you?"
+
+**Red Flags to Watch For:**
+• "I need to think about it" (not urgent enough)
+• "We will do it ourselves" (not sold on value)
+• "We do not have budget" (wrong prospect)
+• Multiple decision makers not on call (will delay close)
+
+**Green Lights:**
+• "This is exactly what we need"
+• "When can we start?"
+• "How does payment work?"
+• Asking detailed questions about implementation`
+                },
+                {
+                  heading: 'Positioning Your Solution',
+                  body: `After presenting the audit, transition to solution:
+
+"So here is how we fix this for [Business Name]:
+
+**Step 1: Automated System**
+We set up an automated review generation system that sends requests via text and email within 24 hours of service completion. This generates 15-20 new reviews per month on autopilot.
+
+**Step 2: Smart Filtering**
+Before sending anyone to Google, we ask them to rate their experience privately. Happy customers (4-5 stars) get sent to leave public reviews. Unhappy customers get routed to a private feedback form so you can fix issues before they post publicly.
+
+**Step 3: Review Response**
+We respond to every review within 24 hours - thanking happy customers and addressing concerns from unhappy ones professionally.
+
+**Step 4: Monthly Reporting**
+You get a detailed report showing reviews gained, rating trends, and competitive positioning.
+
+**Timeline:**
+We can have you live in 5-7 days. You will see your first new reviews within 2 weeks, and by day 90 you should have 40-50+ total reviews.
+
+**Investment:**
+Based on your transaction volume [X customers/month], I recommend our [Growth Package] at $797/month.
+
+Here is the math: If this system brings you just 2-3 additional customers per month, it pays for itself. Everything beyond that is pure profit.
+
+Does that make sense for where you want to take [Business Name]?"
+
+**Pause and wait for response.**
+
+Most will either say yes, ask questions, or raise objections. Be ready for all three.`
+                }
+              ],
+              note: 'The discovery call is not about pitching. Ask questions, listen, and let the audit data do the selling.'
+            }
+          },
+          {
+            id: 'lesson-3-4',
+            title: 'Objection Handling Master Guide',
+            type: 'text',
+            duration: '20 min',
+            description: 'Word-for-word responses to the 12 most common objections',
+            content: {
+              sections: [
+                {
+                  heading: 'The 12 Common Objections',
+                  body: `**Objection 1: "That seems expensive"**
+
+Response: "I understand. Let me put it in perspective. You told me you need about [X] new customers per month. If this system brings you just 2-3 additional customers, it pays for itself. Everything beyond that is profit. Based on what I showed you in the audit, you are currently losing 5-10 customers per month due to your reputation gap. This is not an expense - it is an investment that prevents that loss. Does that make sense?"
+
+---
+
+**Objection 2: "We will do it ourselves"**
+
+Response: "That makes sense, and technically you could. Here is what that looks like: You need to set up the software, build the automations, monitor reviews daily, respond to every review within 24 hours, and generate monthly reports. Most business owners find this takes 10-15 hours per month to do correctly. At your hourly rate of $[X], that is $[Y] per month in opportunity cost. Our service is $797 and we handle everything. It is actually less expensive to have us do it. Plus, you get our expertise - we have done this for [X] businesses and know what works."
+
+---
+
+**Objection 3: "Let me think about it"**
+
+Response: "Of course! What specifically do you need to think about? Is it the investment, the timeline, or something about the system itself?"
+
+[Wait for answer, then address specific concern]
+
+"While you are thinking it over, can I ask: What happens if you wait another 3-6 months? Based on what I showed you, that is 100+ potential customers choosing your competitors instead of you. The cost of inaction is often higher than the cost of action."
+
+---
+
+**Objection 4: "I need to talk to my partner/spouse"**
+
+Response: "Absolutely - this is an important decision. To make sure you have all the information to discuss it, what questions do you think they will have?"
+
+[Answer those questions now]
+
+"Would it make sense to schedule a quick 10-minute call with both of you so I can answer any questions directly? That way you can make a confident decision together. I have time [tomorrow/day after] - does that work?"
+
+---
+
+**Objection 5: "We tried this before and it did not work"**
+
+Response: "I am glad you brought that up. What specifically did not work? Was it the volume of reviews, the quality, the cost?"
+
+[Listen to their answer]
+
+"Here is how we are different: [Address their specific pain point]. Plus, I am confident enough in our system that I can commit to [specific result] in the first 60 days. If we do not hit that, we can part ways. Fair enough?"
+
+---
+
+**Objection 6: "We do not have budget right now"**
+
+Response: "I understand budget constraints. Let me ask: If you could generate 2-3 additional customers per month from better reviews, what would that revenue look like?"
+
+[They give number]
+
+"So the system would generate $[X] in new revenue while costing $797. That is a positive ROI from month one. The question is not whether you have budget - it is whether you can afford NOT to do this. When would budget free up?"
+
+[If they say never, they are not a qualified prospect - move on]`
+                },
+                {
+                  heading: 'Advanced Objection Handling',
+                  body: `**Objection 7: "Can you guarantee results?"**
+
+Response: "Great question. Here is what I can guarantee: I guarantee we will set up the system, send review requests to your customers, respond to all reviews within 24 hours, and provide monthly reporting. What I cannot guarantee is how many of your customers will actually leave reviews - that depends on their experience with your service. However, based on our data from [X] similar businesses, you should see 15-20 new reviews per month. If after 60 days you are not seeing results, we can discuss adjusting the approach or parting ways. Fair?"
+
+---
+
+**Objection 8: "I only want to pay for results"**
+
+Response: "I appreciate that mindset. The challenge is we are setting up systems, monitoring reviews daily, and responding to feedback regardless of volume. Here is what I can do: Our Starter package is $497/month. If after the first month you are not seeing results, you can cancel. But I am confident you will see 8-12 reviews in the first 30 days. Does that give you enough security to move forward?"
+
+---
+
+**Objection 9: "What if we get negative reviews?"**
+
+Response: "Actually, that is exactly what our system prevents. We use a satisfaction filter - before anyone goes to Google, they rate their experience privately first. Happy customers (4-5 stars) get sent to leave public reviews. Unhappy customers (1-3 stars) get a private feedback form where you can address issues before they post publicly. This prevents about 70% of potential negative reviews. The ones that do come in, we help you respond to professionally within 24 hours. Most consumers actually trust businesses MORE when they see professional responses to negative feedback."
+
+---
+
+**Objection 10: "We are not tech savvy"**
+
+Response: "Perfect - that is exactly why we built this service. You do not need to be tech savvy at all. We handle 100% of the technical setup. On your end, you just need to provide us access to your Google Business Profile and your customer contact list. Everything else is automated. Your only job is to continue providing great service - we handle getting those customers to leave reviews."
+
+---
+
+**Objection 11: "How do I know this is not a scam?"**
+
+Response: "Completely fair question, especially with all the questionable services out there. Let me give you some transparency: [Show your website, testimonials, case studies]. I can also connect you with [X] current clients who can speak to their experience. Additionally, we use standard month-to-month agreements - no long-term contracts. If you are not happy after 30 days, you can cancel. I only make money if I deliver results, so I am incentivized to make this work for you."
+
+---
+
+**Objection 12: "Is this legal/ethical?"**
+
+Response: "Excellent question - a lot of people are confused about this. What we do is 100% compliant with Google, FTC, and all review platform policies. We are NOT buying fake reviews, incentivizing reviews with payment, or posting reviews ourselves. We are simply asking real customers who had real experiences to share honest feedback. The satisfaction filter we use is legal because we are not preventing anyone from leaving a review - we are just catching service issues before they go public. This is considered a best practice in reputation management."
+
+**Universal Response Framework:**
+
+When you get an objection you have not heard before:
+
+1. **Acknowledge**: "That is a great question/concern"
+2. **Clarify**: "Help me understand - specifically, what about [X] concerns you?"
+3. **Address**: Give specific, data-backed response
+4. **Check**: "Does that address your concern?"
+5. **Advance**: "So if we can solve [objection], are you ready to move forward?"
+
+Never argue. Never get defensive. Treat every objection as a valid concern that deserves a thoughtful answer.`
+                }
+              ],
+              note: 'Objections are not rejections - they are requests for more information. Handle them confidently and you will close more deals.'
+            }
+          },
+          {
+            id: 'lesson-3-5',
+            title: 'Proposal and Contract Templates',
+            type: 'text',
+            duration: '15 min',
+            description: 'Professional documents that close deals',
+            content: {
+              sections: [
+                {
+                  heading: 'One-Page Proposal Template',
+                  body: `**Proposal Structure:**
+
+**REPUTATION MANAGEMENT PROPOSAL**
+Prepared for: [Business Name]
+Prepared by: [Your Agency]
+Date: [Date]
+
+---
+
+**EXECUTIVE SUMMARY**
+
+Based on our conversation and reputation audit, [Business Name] currently has [X] Google reviews with a [Y] star average. Your main competitors average [Z] reviews, putting you at a competitive disadvantage.
+
+Our goal: Increase your Google reviews to 50+ in 90 days through automated review generation, smart filtering, and professional review response.
+
+---
+
+**THE PROBLEM**
+
+• Current review count: [X] (below industry average)
+• Review velocity: [Y] per month (should be 15-20)
+• Last review: [Z] days ago (appears inactive)
+• Estimated lost revenue: $[A] per month
+
+---
+
+**THE SOLUTION**
+
+Our Reputation Management System includes:
+
+1. Automated Review Generation
+   • SMS and email review requests
+   • Sent within 24 hours of service
+   • Expected: 15-20 reviews/month
+
+2. Negative Review Prevention
+   • Satisfaction filter catches unhappy customers first
+   • Private feedback loop for service recovery
+   • Prevents 70% of potential negative reviews
+
+3. Professional Review Response
+   • All reviews answered within 24 hours
+   • Builds trust and engagement
+   • Turns detractors into advocates
+
+4. Monthly Performance Reporting
+   • Review count growth
+   • Rating trends
+   • Competitive analysis
+
+---
+
+**INVESTMENT OPTIONS**
+
+[Include your 3 pricing tiers here with checkboxes]
+
+---
+
+**TIMELINE**
+
+• Week 1: Setup and integration
+• Week 2: System launch and first reviews
+• Week 4: First monthly report
+• Day 90: Target of 50+ total reviews
+
+---
+
+**NEXT STEPS**
+
+To move forward:
+1. Review and sign service agreement
+2. Complete payment setup
+3. Provide access to Google Business Profile
+4. Schedule onboarding call
+
+Questions? Call me at [Phone] or email [Email].
+
+---
+
+Looking forward to helping [Business Name] dominate online reputation in [City]!
+
+[Your Name]
+[Your Title]
+[Your Agency]`
+                },
+                {
+                  heading: 'Service Agreement Template',
+                  body: `**REPUTATION MANAGEMENT SERVICE AGREEMENT**
+
+This agreement is between [Your Agency LLC] ("Agency") and [Client Business Name] ("Client").
+
+**SERVICES PROVIDED**
+
+Agency will provide the following services:
+• Automated review generation system setup and management
+• Review monitoring across Google, Facebook, and Yelp
+• Professional response to all reviews within 24 hours
+• Monthly performance reporting
+• Satisfaction survey and smart routing implementation
+
+**TERM AND PAYMENT**
+
+• Service begins: [Date]
+• Monthly fee: $[Amount]
+• Billing cycle: Monthly, in advance
+• Payment method: Credit card on file
+• First payment due: Upon signing
+• Subsequent payments: 1st of each month
+
+**TERM AND TERMINATION**
+
+• This is a month-to-month agreement
+• Either party may terminate with 30 days written notice
+• No refunds for partial months
+• Setup fees (if applicable): Non-refundable
+
+**CLIENT RESPONSIBILITIES**
+
+Client agrees to:
+• Provide access to Google Business Profile (admin level)
+• Provide customer contact information or CRM access
+• Continue providing quality service to customers
+• Respond to urgent customer service issues flagged by Agency
+
+**AGENCY RESPONSIBILITIES**
+
+Agency agrees to:
+• Set up and maintain automated review system
+• Monitor and respond to reviews within 24 hours
+• Provide monthly performance reports
+• Maintain system uptime and functionality
+
+**EXPECTED RESULTS**
+
+While Agency cannot guarantee specific outcomes, typical clients see:
+• 12-20 new reviews per month
+• 4.0+ star average rating maintenance
+• 80%+ review response rate
+
+Actual results depend on client customer volume and satisfaction.
+
+**LIMITATION OF LIABILITY**
+
+Agency is not liable for:
+• Negative reviews from legitimately dissatisfied customers
+• Google or platform policy changes affecting reviews
+• Customer non-response to review requests
+• Results below expectations due to low customer satisfaction
+
+**CONFIDENTIALITY**
+
+Both parties agree to keep proprietary information confidential.
+
+**ENTIRE AGREEMENT**
+
+This agreement constitutes the entire understanding between parties and supersedes all prior agreements.
+
+---
+
+**SIGNATURES**
+
+Client:
+Name: ___________________
+Title: ___________________
+Signature: ___________________
+Date: ___________________
+
+Agency:
+Name: ___________________
+Title: ___________________
+Signature: ___________________
+Date: ___________________
+
+---
+
+**Use DocuSign or PandaDoc for e-signatures.**`
+                },
+                {
+                  heading: 'Credit Card Authorization Form',
+                  body: `**CREDIT CARD AUTHORIZATION FORM**
+
+I authorize [Your Agency] to charge my credit card for reputation management services.
+
+**Billing Information:**
+Business Name: ___________________
+Cardholder Name: ___________________
+Billing Address: ___________________
+City, State, ZIP: ___________________
+Phone: ___________________
+Email: ___________________
+
+**Credit Card Information:**
+Card Type: [ ] Visa [ ] Mastercard [ ] Amex [ ] Discover
+Card Number: ___________________
+Expiration Date: ___________________
+CVV: ___________________
+
+**Authorization:**
+Monthly Amount: $___________________
+Recurring: [ ] Yes [ ] No
+Start Date: ___________________
+
+I authorize [Your Agency] to charge the above credit card for monthly services as outlined in the Service Agreement. I understand that my information will be saved on file for future transactions on my account.
+
+Signature: ___________________
+Date: ___________________
+
+---
+
+**Alternative: Use Stripe Payment Links**
+
+For easier setup, create Stripe payment links for each pricing tier:
+• Starter: $497/month recurring
+• Growth: $797/month recurring
+• Enterprise: $1,297/month recurring
+
+Send link in proposal. Client clicks, enters card, and billing is automated. Much easier than manual forms.`
+                }
+              ],
+              note: 'Professional documentation builds trust and makes the buying process friction-free. Never do deals on handshakes alone.'
+            }
+          },
+          {
+            id: 'lesson-3-6',
+            title: 'Closing Techniques',
+            type: 'text',
+            duration: '20 min',
+            description: 'How to confidently ask for the sale',
+            content: {
+              sections: [
+                {
+                  heading: 'The Assumptive Close',
+                  body: `**When to Use:** High-intent prospects who have asked detailed questions and seem ready.
+
+**How It Works:**
+You assume they are buying and move directly to implementation details.
+
+**Example:**
+"Great! So let me walk you through what happens next. First, I will send over the service agreement for you to review and sign. Once I get that back, I will set up your account and schedule our onboarding call for [day/time]. We can have you live by [date]. Does Monday or Wednesday work better for our kickoff?"
+
+**Key Phrases:**
+• "Let me walk you through next steps..."
+• "Once I get your signature..."
+• "When we go live next week..."
+• "Your first report will come on..."
+
+You never explicitly asked "do you want to buy?" - you just moved forward as if they already decided. If they are truly ready, they will say "yes" or "sounds good." If not, they will stop you and raise an objection (which you can then handle).
+
+**Success Rate:** 60-70% with qualified, high-intent prospects.`
+                },
+                {
+                  heading: 'The Alternative Close',
+                  body: `**When to Use:** Prospects who seem interested but hesitant or overwhelmed by decisions.
+
+**How It Works:**
+Give them a choice between two yeses (not yes/no).
+
+**Example:**
+"Based on what you have told me, I think either the Starter package at $497 or the Growth package at $797 would work well for you. The main difference is Growth includes monitoring 5 platforms instead of 2, plus quarterly competitive audits. Which one feels like a better fit for where you want to take the business?"
+
+**Other Examples:**
+• "Would you prefer to start on the 1st or the 15th?"
+• "Should I set up your onboarding call for Tuesday morning or Thursday afternoon?"
+• "Do you want to start with just Google reviews, or add Facebook and Yelp from day one?"
+
+**Key Principle:**
+You are not asking IF they want to buy. You are asking HOW they want to buy.
+
+**Success Rate:** 50-60% with interested but indecisive prospects.`
+                },
+                {
+                  heading: 'The Summary Close',
+                  body: `**When to Use:** Long calls with lots of information discussed. Prospect seems interested but is not committing.
+
+**How It Works:**
+Summarize everything they agreed was important, then ask directly.
+
+**Example:**
+"Let me recap what we have covered:
+
+• You said your main goal is to compete better with [Competitor X] who has 80 reviews
+• You agreed that negative reviews without responses are hurting your conversion
+• You told me 2-3 extra customers per month would make this worth it
+• And you confirmed budget is not an issue if the ROI makes sense
+
+Based on all that, our Growth package at $797/month would accomplish those goals and generate 15-20 reviews monthly. That should get you past your competitor in 90 days and bring in the additional customers you need.
+
+Does it make sense to move forward?"
+
+**Pause and wait for answer.**
+
+This forces them to confront their own stated needs and either commit or explain why those needs are not actually priorities.
+
+**Success Rate:** 40-50% (works on "fence sitters")`
+                },
+                {
+                  heading: 'The Trial Close',
+                  body: `**When to Use:** Throughout the conversation to gauge interest before going for final close.
+
+**How It Works:**
+Ask non-committal questions to test their temperature.
+
+**Examples:**
+• "How does this sound so far?"
+• "Does this approach make sense for your business?"
+• "Can you see this working for you?"
+• "What questions do you have?"
+
+If they say "yes, this makes sense" or "I can see this working," you know they are warming up. If they say "I am not sure" or have lots of questions, keep selling.
+
+**Lead Into Final Close:**
+After several positive trial closes, go for the final close:
+
+"It sounds like you see how this would work for [Business Name]. Should we get you set up?"
+
+**Success Rate:** Not a standalone close, but increases success of final close by 20-30%.`
+                },
+                {
+                  heading: 'Handling The Final Push',
+                  body: `**What to Do After You Ask for the Sale:**
+
+1. **Stop Talking**
+   After you ask "Does it make sense to move forward?" - STOP. Do not fill the silence. Wait for them to respond. The first person to speak loses.
+
+2. **Listen to Their Response**
+   • "Yes" → Great! Move to paperwork
+   • "Let me think about it" → Handle objection
+   • "I have a question..." → Answer, then ask again
+   • "No" → "Can I ask what is holding you back?"
+
+3. **Do Not Get Discouraged**
+   Even great closers only close 30-40% of qualified prospects on first call. The rest need follow-up.
+
+4. **Always Get Next Steps**
+   If they do not buy now:
+   • "When should I follow up?"
+   • "What specific information do you need?"
+   • "Can I send you [case study/testimonial]?"
+
+Never leave a call without a defined next action.
+
+**Confidence is Key:**
+If you sound unsure when asking for the sale, they will be unsure about buying. Practice your close until it sounds natural and confident.`
+                }
+              ],
+              note: 'Closing is not manipulation - it is helping qualified prospects make a decision that benefits their business. Ask confidently.'
+            }
+          },
+          {
+            id: 'lesson-3-7',
+            title: 'Follow-Up Sequence',
+            type: 'text',
+            duration: '15 min',
+            description: 'Multi-touch follow-up that converts indecision into sales',
+            content: {
+              sections: [
+                {
+                  heading: 'The 7-Touch Follow-Up Sequence',
+                  body: `Most sales happen on follow-up, not on the first call. Here is the sequence:
+
+**Touch 1: Same Day (Email)**
+Sent within 2 hours of call
+
+Subject: "Great talking today, [Name]"
+
+Body:
+"Hi [Name],
+
+Thanks for taking the time to chat today. As promised, I am attaching your reputation audit and our proposal.
+
+Quick recap:
+• Your current situation: [X] reviews, [Y] star average
+• Our recommendation: [Package name]
+• Expected outcome: 40-50 reviews in 90 days
+• Investment: $[Amount]/month
+
+If you have any questions, just reply to this email or call me at [Phone].
+
+Looking forward to working with you!
+
+[Your Name]"
+
+---
+
+**Touch 2: Day 3 (Email)**
+If no response after 3 days
+
+Subject: "Quick follow-up - [Business Name] reputation"
+
+Body:
+"Hi [Name],
+
+Just following up on our conversation from [Day]. I wanted to make sure you received the proposal and answer any questions that came up.
+
+One thing I forgot to mention: We are onboarding [X] new clients this month and only have [Y] spots left. I would hate for you to miss out if this is something you want to move forward with.
+
+Let me know if you want to grab one of those spots or if you need anything else from me.
+
+[Your Name]"
+
+---
+
+**Touch 3: Day 7 (Call + Voicemail)**
+Pick up the phone
+
+Voicemail script:
+"Hey [Name], it is [Your Name] from [Your Agency]. Just wanted to check in on the reputation management proposal I sent over last week. I know you are busy, so I will shoot you a quick email with some additional information. Talk soon!"
+
+Immediately send email referencing the voicemail.
+
+---
+
+**Touch 4: Day 10 (Value Email)**
+Provide case study or testimonial
+
+Subject: "Thought you might find this interesting"
+
+Body:
+"Hi [Name],
+
+I was just reviewing results for one of our clients in [similar industry] and thought you would find this interesting:
+
+[Client Name] started with 12 reviews in January. After 90 days with our system, they now have 64 reviews and a 4.6-star average. They are telling us their phone is ringing 30% more than before.
+
+I attached their full case study if you want to see the details.
+
+This is exactly what we would do for [Business Name]. Let me know if you want to chat more about it.
+
+[Your Name]"
+
+---
+
+**Touch 5: Day 14 (Break-Up Email)**
+Create urgency with finality
+
+Subject: "Should I close your file?"
+
+Body:
+"Hi [Name],
+
+I have not heard back from you, so I wanted to check in one last time before I close your file.
+
+If reputation management is not a priority right now, no worries at all - I totally understand.
+
+But if you are still interested and just have not had time to circle back, let me know. I would hate to close your file if this is actually something you want to do.
+
+Either way, thanks for your time!
+
+[Your Name]"
+
+This often gets responses because it creates FOMO (fear of missing out).
+
+---
+
+**Touch 6: Day 30 (Re-Engagement)**
+If they responded but went quiet again
+
+Subject: "Checking in"
+
+Body:
+"Hi [Name],
+
+It has been about a month since we last talked. Wanted to see if anything has changed on your end?
+
+I am still here if you want to move forward with improving [Business Name] online reputation.
+
+Just let me know!
+
+[Your Name]"
+
+---
+
+**Touch 7: Day 90 (Final Check-In)**
+Long-term nurture
+
+Subject: "Quick question"
+
+Body:
+"Hi [Name],
+
+It has been a few months since we talked about reputation management for [Business Name].
+
+Quick question: Did you end up finding a solution, or is this still something you want to address?
+
+If you are still interested, I would be happy to update your audit and show you current standings vs. competitors.
+
+Let me know!
+
+[Your Name]"
+
+After this, add them to quarterly newsletter/nurture campaign.`
+                },
+                {
+                  heading: 'Follow-Up Best Practices',
+                  body: `**Timing:**
+• Email: Morning (8-10am) or late afternoon (4-6pm)
+• Calls: Tuesday-Thursday, 10am-4pm (avoid Mondays/Fridays)
+• Never follow up on weekends
+
+**Tone:**
+• Helpful, not pushy
+• Assume they are busy, not uninterested
+• Provide value in every touch (case study, tip, insight)
+
+**Persistence:**
+• 80% of sales happen between touch 5-12
+• Most salespeople give up after 1-2 touches
+• You win by being professionally persistent
+
+**When to Stop:**
+• They explicitly say "not interested"
+• They ask you to stop contacting them
+• After 7 touches with zero response
+• They bought from a competitor
+
+**Tracking:**
+Use CRM or spreadsheet to track:
+• Prospect name
+• Last contact date
+• Next touch due
+• Touch count
+• Status (interested/thinking/dead)
+
+Never rely on memory - you will forget to follow up.`
+                }
+              ],
+              note: 'The fortune is in the follow-up. Most prospects do not say no - they just get busy. Your job is to stay top of mind.'
+            }
+          },
+          {
+            id: 'lesson-3-8',
+            title: 'Referral Generation System',
+            type: 'text',
+            duration: '15 min',
+            description: 'Turn happy clients into your best salespeople',
+            content: {
+              sections: [
+                {
+                  heading: 'When to Ask for Referrals',
+                  body: `**Timing is Everything:**
+
+**Too Early (Days 1-30):**
+Client has not seen results yet. Asking now seems presumptuous.
+
+**Too Late (12+ months):**
+The excitement has worn off. They have forgotten how big a difference you made.
+
+**Perfect Time (Days 60-90):**
+Client has seen 20-40 new reviews appear. Results are undeniable and excitement is high.
+
+**The Trigger:**
+Wait until you have a particularly strong month. Then, during your monthly check-in call:
+
+"[Name], I am so excited to share this month results with you. You gained 22 new reviews and your average rating went from 4.2 to 4.5 stars. You are now ranking #2 in [City] for your category. How does that feel?"
+
+[Let them express excitement]
+
+"I love hearing that! Question: Do you know any other [industry] business owners who need help with their reputation like you did 90 days ago?"
+
+Most will offer 1-2 names on the spot.`
+                },
+                {
+                  heading: 'The 4-Part Referral Request',
+                  body: `**Part 1: Establish Success**
+"You started with 15 reviews and now you have 62. That is massive progress."
+
+**Part 2: Acknowledge Their Role**
+"Of course, this only works because you are providing great service. We just amplified it."
+
+**Part 3: The Ask**
+"I am trying to help more [industry] businesses like yours. Do you know anyone in your network who needs better reviews?"
+
+**Part 4: Make It Easy**
+"No pressure at all - just if someone comes to mind, feel free to connect us. I will take good care of them."
+
+**Alternative Ask (More Direct):**
+"Who is the best [industry] business owner you know? I would love to help them like I helped you."
+
+**What NOT to Say:**
+✗ "Can you refer me to people?"
+✗ "Do you know anyone who needs reviews?"
+✗ "Will you give me referrals?"
+
+These are vague and put pressure on them.
+
+**What TO Say:**
+✓ "Who is the best [industry owner] you know?"
+✓ "Do you know anyone struggling with negative reviews?"
+✓ "Who in your network should I be talking to?"
+
+These are specific and make them think of actual people.`
+                },
+                {
+                  heading: 'Referral Incentive Structures',
+                  body: `**Option 1: Discount for Referrer**
+"For every person you refer who becomes a client, I will give you $100 off your next month of service."
+
+**Pros:** Simple, immediate benefit to referrer
+**Cons:** Reduces your revenue
+
+---
+
+**Option 2: Cash Payment**
+"For every person you refer who becomes a client, I will send you a $200 Visa gift card."
+
+**Pros:** Direct monetary value, attractive incentive
+**Cons:** Comes out of your pocket
+
+---
+
+**Option 3: Recurring Commission**
+"For every person you refer who becomes a client, you receive 10% of their monthly fee for as long as they remain a client."
+
+**Pros:** Ongoing passive income for referrer, incentivizes quality referrals
+**Cons:** More complex to track and pay
+
+---
+
+**Option 4: No Monetary Incentive**
+Just ask without offering payment.
+
+**Pros:** No cost to you, keeps margins high
+**Cons:** May get fewer referrals
+
+**My Recommendation:**
+Start with Option 4 (no incentive). Great clients will refer you because they love your work, not because of money. If you are not getting referrals organically after 90 days, add Option 1 or 2 as a structured incentive.
+
+**For Option 3 (Recurring Commission):**
+This works great for "unofficial partners" - people who can send you lots of referrals:
+• Web designers
+• SEO agencies
+• Marketing consultants
+• Business coaches
+
+Offer them 10-15% recurring for every client they send. This creates an ongoing income stream for them and consistent leads for you.`
+                },
+                {
+                  heading: 'Making Referrals Effortless',
+                  body: `**Provide a Referral Link:**
+Create a simple landing page: youragency.com/referred-by-[clientname]
+
+Give this link to clients: "Just send this link to anyone who asks about what we do for you. It has all the info and they can book a call directly."
+
+Track conversions from each client.
+
+---
+
+**Write the Introduction for Them:**
+Make it copy-paste easy.
+
+"Hey [Name], here is a quick intro you can send:
+
+'Hey [Referral Name], I wanted to introduce you to [Your Name] from [Your Agency]. They have been helping us with our online reputation and it has made a huge difference. We went from 12 reviews to 50+ in just 90 days. I think they could help you too. Here is the link to learn more: [URL].'
+
+Feel free to customize that however you want!"
+
+---
+
+**Provide a Referral Card:**
+Design a simple business card that says:
+
+"[Client Name] recommends [Your Agency] for reputation management.
+
+Get 20+ five-star reviews per month on autopilot.
+
+Schedule free audit: [URL]"
+
+Give clients 25-50 cards to hand out at networking events.
+
+---
+
+**Create a Referral Program Page:**
+Simple webpage explaining your referral program:
+• How it works
+• What they get for referring
+• Who is a good fit
+• How to make a referral
+
+Link: youragency.com/referrals
+
+The easier you make it, the more referrals you will get.`
+                }
+              ],
+              note: 'Referrals are the highest-quality leads you can get. They close faster, pay more, and stay longer than cold prospects. Build a system for generating them.'
+            }
+          }
+        ]
+      },
+      {
+        id: 'module-4',
+        title: 'Module 4: Fulfillment & Client Onboarding',
+        description: 'Deliver exceptional results and keep clients happy long-term',
+        estimatedTime: '2.5 hours',
+        lessons: [
+          {
+            id: 'lesson-4-1',
+            title: 'First 48 Hours Onboarding Process',
+            type: 'text',
+            duration: '20 min',
+            description: 'How to start every client relationship on the right foot',
+            content: {
+              sections: [
+                {
+                  heading: 'The Critical First Impression',
+                  body: `The first 48 hours after a client signs set the tone for the entire relationship.
+
+**What clients are thinking:**
+• "Did I make the right decision?"
+• "Are they actually going to deliver?"
+• "Should I have shopped around more?"
+
+This is called "buyer remorse" and it happens to 60-70% of new customers.
+
+**Your Goal:**
+Make them feel confident, informed, and excited within the first 2 days.
+
+**The 48-Hour Timeline:**
+
+**Hour 1:** Confirmation email sent
+**Hour 4:** Welcome packet delivered
+**Hour 24:** Kickoff call scheduled
+**Hour 48:** System setup complete
+
+By hour 48, they should feel like they made the best decision ever.`
+                }
+              ]
+            }
           }
         ]
       }
