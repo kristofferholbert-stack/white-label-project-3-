@@ -73,6 +73,7 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     const [saving, setSaving] = useState(false);
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [loadError, setLoadError] = useState<string | null>(null);
+    const [maxSelectionMessage, setMaxSelectionMessage] = useState<string | null>(null);
 
     useEffect(() => {
         const checkSubscription = async () => {
@@ -86,29 +87,37 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
 
     // Check if we should show results after signup
     useEffect(() => {
+        let timeoutId: NodeJS.Timeout | null = null;
+
         const checkForResults = async () => {
             const hash = window.location.hash;
             const params = new URLSearchParams(hash.split('?')[1]);
             const hasUrlFlag = params.get('showResults') === 'true';
             const hasStorageFlag = sessionStorage.getItem('show_intake_results') === 'true';
 
-            console.log('IntakePage: Checking for results', {
-                hasUrlFlag,
-                hasStorageFlag,
-                hasUser: !!user,
-                hash: window.location.hash,
-                timestamp: new Date().toISOString()
-            });
+            if (process.env.NODE_ENV === 'development') {
+                console.log('IntakePage: Checking for results', {
+                    hasUrlFlag,
+                    hasStorageFlag,
+                    hasUser: !!user,
+                    hash: window.location.hash,
+                    timestamp: new Date().toISOString()
+                });
+            }
 
             if ((hasUrlFlag || hasStorageFlag)) {
                 if (!user) {
-                    console.log('IntakePage: Waiting for authentication...');
+                    if (process.env.NODE_ENV === 'development') {
+                        console.log('IntakePage: Waiting for authentication...');
+                    }
                     setIsAnalyzing(true);
                     return;
                 }
 
                 sessionStorage.removeItem('show_intake_results');
-                console.log('IntakePage: User authenticated, loading results data');
+                if (process.env.NODE_ENV === 'development') {
+                    console.log('IntakePage: User authenticated, loading results data');
+                }
 
                 setIsAnalyzing(true);
                 setLoadError(null);
@@ -120,14 +129,18 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                         const savedData = JSON.parse(pendingDataStr);
 
                         if (savedData.expiresAt && Date.now() > savedData.expiresAt) {
-                            console.log('IntakePage: Data expired, loading from database');
+                            if (process.env.NODE_ENV === 'development') {
+                                console.log('IntakePage: Data expired, loading from database');
+                            }
                             localStorage.removeItem('pending_intake_data');
                         } else {
-                            console.log('IntakePage: Loading from localStorage', {
-                                currentMRR: savedData.currentMRR,
-                                targetMRR: savedData.targetMRR,
-                                savedAt: new Date(savedData.savedAt || 0).toISOString()
-                            });
+                            if (process.env.NODE_ENV === 'development') {
+                                console.log('IntakePage: Loading from localStorage', {
+                                    currentMRR: savedData.currentMRR,
+                                    targetMRR: savedData.targetMRR,
+                                    savedAt: new Date(savedData.savedAt || 0).toISOString()
+                                });
+                            }
 
                             if (!savedData.currentMRR || !savedData.answers) {
                                 console.error('IntakePage: Invalid data in localStorage');
@@ -143,17 +156,21 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
 
                             localStorage.removeItem('pending_intake_data');
 
-                            setTimeout(() => {
+                            timeoutId = setTimeout(() => {
                                 setIsAnalyzing(false);
                                 setShowResults(true);
-                                console.log('IntakePage: Results displayed successfully');
+                                if (process.env.NODE_ENV === 'development') {
+                                    console.log('IntakePage: Results displayed successfully');
+                                }
                             }, 1500);
 
                             return;
                         }
                     }
 
-                    console.log('IntakePage: Loading from database for user:', user.id);
+                    if (process.env.NODE_ENV === 'development') {
+                        console.log('IntakePage: Loading from database for user:', user.id);
+                    }
                     const { data: progressionData, error: dbError } = await supabase
                         .from('user_progression')
                         .select('*')
@@ -168,19 +185,23 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                     }
 
                     if (progressionData) {
-                        console.log('IntakePage: Loaded from database', {
-                            currentMRR: progressionData.current_mrr,
-                            targetMRR: progressionData.target_mrr
-                        });
+                        if (process.env.NODE_ENV === 'development') {
+                            console.log('IntakePage: Loaded from database', {
+                                currentMRR: progressionData.current_mrr,
+                                targetMRR: progressionData.target_mrr
+                            });
+                        }
 
                         setCurrentMRR(progressionData.current_mrr);
                         setTargetMRR(progressionData.target_mrr - progressionData.current_mrr);
                         setAnswers(progressionData.intake_responses || {});
 
-                        setTimeout(() => {
+                        timeoutId = setTimeout(() => {
                             setIsAnalyzing(false);
                             setShowResults(true);
-                            console.log('IntakePage: Results displayed from DB');
+                            if (process.env.NODE_ENV === 'development') {
+                                console.log('IntakePage: Results displayed from DB');
+                            }
                         }, 1500);
                     } else {
                         console.warn('IntakePage: No progression data found');
@@ -202,6 +223,12 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
         };
 
         checkForResults();
+
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        };
     }, [user, onNavigate]);
 
     const questions = [
@@ -317,9 +344,15 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                 const current = prev[questionId as keyof IntakeResponse];
                 if (isMulti && Array.isArray(current)) {
                     if (current.includes(option)) {
+                        setMaxSelectionMessage(null);
                         return { ...prev, [questionId]: current.filter(item => item !== option) };
                     }
-                    if (max && current.length >= max) return prev;
+                    if (max && current.length >= max) {
+                        setMaxSelectionMessage(`Maximum ${max} selections allowed`);
+                        setTimeout(() => setMaxSelectionMessage(null), 3000);
+                        return prev;
+                    }
+                    setMaxSelectionMessage(null);
                     return { ...prev, [questionId]: [...current, option] };
                 }
                 return { ...prev, [questionId]: option };
@@ -347,7 +380,9 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                 answers,
                 currentMRR,
                 targetMRR,
-                currentLevelSlug: currentLevel.slug
+                currentLevelSlug: currentLevel.slug,
+                savedAt: Date.now(),
+                expiresAt: Date.now() + (24 * 60 * 60 * 1000)
             };
             localStorage.setItem('pending_intake_data', JSON.stringify(pendingData));
 
@@ -372,11 +407,13 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
 
     const recommendedStacks = CURATED_STACKS.slice(0, 3);
 
-    console.log('IntakePage: Recommended Stacks', {
-        totalStacks: CURATED_STACKS.length,
-        recommendedCount: recommendedStacks.length,
-        stackNames: recommendedStacks.map(s => s.name)
-    });
+    if (process.env.NODE_ENV === 'development') {
+        console.log('IntakePage: Recommended Stacks', {
+            totalStacks: CURATED_STACKS.length,
+            recommendedCount: recommendedStacks.length,
+            stackNames: recommendedStacks.map(s => s.name)
+        });
+    }
 
     const handleLaunchStack = async (stack: SolutionStack) => {
         const userNiche = answers.niches[0] || stack.targetNiche;
@@ -425,7 +462,14 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
         return (
             <div className="min-h-screen bg-gray-950 flex flex-col p-4">
                 <div className="max-w-2xl mx-auto w-full mb-8 mt-8">
-                    <div className="h-1.5 w-full bg-slate-800 rounded-full">
+                    <div
+                        role="progressbar"
+                        aria-valuenow={step}
+                        aria-valuemin={0}
+                        aria-valuemax={questions.length}
+                        aria-label={`Question ${step} of ${questions.length}`}
+                        className="h-1.5 w-full bg-slate-800 rounded-full"
+                    >
                         <div className="h-full bg-primary-500 rounded-full transition-all duration-300" style={{ width: `${(step / questions.length) * 100}%` }}></div>
                     </div>
                 </div>
@@ -434,6 +478,11 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                     <div className="max-w-2xl w-full animate-fade-in-up">
                         <h2 className="text-3xl font-bold text-white mb-2 text-center">{currentQ.label}</h2>
                         {currentQ.subLabel && <p className="text-slate-400 text-center mb-8">{currentQ.subLabel}</p>}
+                        {maxSelectionMessage && (
+                            <div className="mb-4 p-3 bg-amber-500/20 border border-amber-500/50 rounded-lg text-center">
+                                <p className="text-amber-300 text-sm font-medium">{maxSelectionMessage}</p>
+                            </div>
+                        )}
 
                         <div className="grid gap-3 mt-8">
                             {currentQ.options.map((option) => {
@@ -446,6 +495,9 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                                         key={optionLabel}
                                         onClick={() => handleOptionClick(currentQ.id, typeof option === 'string' ? option : option, currentQ.multi, currentQ.max)}
                                         className={`p-5 rounded-xl border text-left text-lg font-medium transition-all duration-200 flex items-center justify-between ${isSelected ? 'bg-primary-600 border-primary-500 text-white shadow-lg shadow-primary-900/20' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-600 hover:bg-slate-800'}`}
+                                        role={currentQ.multi ? 'checkbox' : 'radio'}
+                                        aria-checked={isSelected}
+                                        aria-label={optionLabel}
                                     >
                                         {optionLabel}
                                         {isSelected && <CheckIcon />}
@@ -458,10 +510,20 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                              <button onClick={() => setStep(s => s - 1)} className="text-slate-500 hover:text-white font-medium px-4 py-2">Back</button>
                              <button
                                 onClick={handleNext}
-                                disabled={!canProceed}
-                                className="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                disabled={!canProceed || saving}
+                                className="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
                             >
-                                {step === questions.length && !user ? 'Continue to Account Setup →' : 'Next Step →'}
+                                {saving ? (
+                                    <>
+                                        <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        <span>Saving...</span>
+                                    </>
+                                ) : (
+                                    <span>{step === questions.length && !user ? 'Continue to Account Setup →' : 'Next Step →'}</span>
+                                )}
                             </button>
                         </div>
                     </div>
@@ -497,10 +559,10 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                     </div>
                 ) : (
                     <>
-                        <div className="relative flex items-center justify-center mb-8">
+                        <div className="relative flex items-center justify-center mb-8" role="status" aria-live="polite">
                             <div className="absolute w-32 h-32 bg-primary-500/20 rounded-full animate-ping"></div>
                             <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center shadow-lg shadow-primary-500/50 animate-pulse">
-                                <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
@@ -521,14 +583,16 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
     if (showResults) {
         const finalTargetMRR = currentMRR + targetMRR;
 
-        console.log('IntakePage: Rendering results', {
-            showResults,
-            currentMRR,
-            targetMRR,
-            finalTargetMRR,
-            recommendedStacksCount: recommendedStacks.length,
-            currentLevel: currentLevel.name
-        });
+        if (process.env.NODE_ENV === 'development') {
+            console.log('IntakePage: Rendering results', {
+                showResults,
+                currentMRR,
+                targetMRR,
+                finalTargetMRR,
+                recommendedStacksCount: recommendedStacks.length,
+                currentLevel: currentLevel.name
+            });
+        }
 
         return (
             <main className="min-h-screen bg-gray-950 p-4 sm:p-8 relative">
@@ -628,7 +692,7 @@ export const IntakePage: React.FC<IntakePageProps> = ({ onNavigate }) => {
                             </div>
                             <h2 className="text-3xl font-bold text-white mb-3">Recommended Stacks for {currentLevel.name}</h2>
                             <p className="text-slate-400 max-w-2xl mx-auto">
-                                Based on your {answers.agencyType} status and desire to add {answers.desiredAddons.join(', ')}, here are the exact stacks used by successful agencies at your level.
+                                Based on your {answers.agencyType} status{answers.desiredAddons.length > 0 ? ` and desire to add ${answers.desiredAddons.join(', ')}` : ' and goals for growth'}, here are the exact stacks used by successful agencies at your level.
                             </p>
                         </div>
                     </div>
